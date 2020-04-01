@@ -1,0 +1,11 @@
+name = "MadinAI - 0.0.0";
+dir = "@madinai";
+author = "Madin";
+url = "https://github.com/armaforces/MadinAI/";
+action = "https://armaforces.com/";
+actionName = "Website";
+logo = "\z\mai\addons\main\ui\logo_sm_ca.paa";
+logoOver = "\z\MAI\addons\main\ui\logo_sm_ca.paa";
+overviewPicture = "\z\MAI\addons\main\ui\logo_sm_ca.paa";
+tooltip = "MadinAI";
+description = "ArmaForces MadinAI for AI enhancements and modules.";

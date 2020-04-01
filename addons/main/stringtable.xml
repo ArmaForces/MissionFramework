@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MAI">
+    <Package name="Main">
+        <Key ID="STR_MAI_Main_Attributes">
+            <English>MadinAI Attributes</English>
+            <Polish>Atrybuty MadinAI</Polish>
+        </Key>
+        <Key ID="STR_MAI_Main_Category">
+            <English>MadinAI</English>
+        </Key>
+        <Key ID="STR_MAI_Main_Toolbar">
+            <English>MadinAI</English>
+        </Key>
+    </Package>
+</Project>
