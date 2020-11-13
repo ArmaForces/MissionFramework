@@ -9,7 +9,7 @@
             "type": "sqf",
             "request": "launch",
             "missionRoot": "${workspaceFolder}",
-            "scriptPrefix": "z\\mai"
+            "scriptPrefix": "z\\afmf"
         }
     ]
 }

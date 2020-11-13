@@ -16,7 +16,7 @@ import xml.etree.ElementTree as ET
 
 
 ######## GLOBALS #########
-PROJECT_NAME = "MAI"
+PROJECT_NAME = "AFMF"
 ##########################
 
 

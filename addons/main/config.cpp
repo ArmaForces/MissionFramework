@@ -9,7 +9,7 @@ class CfgPatches {
         requiredAddons[] = {
             "cba_main"
         };
-        author = "Madin";
+        author = "ArmaForces";
         VERSION_CONFIG;
     };
 };

@@ -1,6 +1,6 @@
-name = "ArmaForces MadinAI"
-prefix = "mai"
-author = "Madin"
+name = "ArmaForces Mission Framework"
+prefix = "afmf"
+author = "ArmaForces"
 files = [
     "LICENSE",
     "mod.cpp",
@@ -9,9 +9,9 @@ files = [
 
 exclude = ["*.psd", "*.png", "*.tga"]
 
-modname = "madinai"
-keyname = "madinai_{{version}}"
-signame = "madinai_{{version}}"
+modname = "armaforces_mission_framework"
+keyname = "armaforces_mission_framework_{{version}}"
+signame = "armaforces_mission_framework_{{version}}"
 
 releasebuild = [
     "!Set_version",
@@ -28,12 +28,12 @@ headerexts = [
 
 [scripts.Set_version]
     steps_windows = [
-        "powershell ./tools/Set-Version.ps1 {{version}} '@madinai'"
+        "powershell ./tools/Set-Version.ps1 {{version}} '@armaforces_mission_framework'"
     ]
     # show_output = true
 
 [scripts.publish]
     steps_windows = [
-        "powershell ./tools/Publish.ps1 {{version}} 1934142795 '@madinai'"
+        "powershell ./tools/Publish.ps1 {{version}} 1934142795 '@armaforces_mission_framework'"
     ]
     show_output = true
