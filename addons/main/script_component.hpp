@@ -1,5 +1,5 @@
 #define COMPONENT main
-#include "\z\mai\addons\main\script_mod.hpp"
+#include "\z\afmf\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
@@ -11,4 +11,4 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MAIN
 #endif
 
-#include "\z\mai\addons\main\script_macros.hpp"
+#include "\z\afmf\addons\main\script_macros.hpp"

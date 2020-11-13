@@ -1,4 +1,4 @@
-# ArmaForces MadinAI CONTRIBUTOR LIST
+# ArmaForces Mission Framework CONTRIBUTOR LIST
 # If you contributed, but are not listed here,
 # contact one of the Core Team members.
 #
