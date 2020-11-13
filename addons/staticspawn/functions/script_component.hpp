@@ -1,0 +1,1 @@
+#include "\z\MAI\addons\staticspawn\script_component.hpp"

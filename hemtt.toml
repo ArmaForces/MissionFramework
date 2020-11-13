@@ -1,6 +1,6 @@
-name = "ArmaForces Mission Framework"
-prefix = "afmf"
-author = "ArmaForces"
+name = "ArmaForces MAI"
+prefix = "MAI"
+author = "Madin"
 files = [
     "LICENSE",
     "mod.cpp",
@@ -9,9 +9,9 @@ files = [
 
 exclude = ["*.psd", "*.png", "*.tga"]
 
-modname = "armaforces_mission_framework"
-keyname = "armaforces_mission_framework_{{version}}"
-signame = "armaforces_mission_framework_{{version}}"
+modname = "MAI"
+keyname = "MAI{{version}}"
+signame = "MAI{{version}}"
 
 releasebuild = [
     "!Set_version",
