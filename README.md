@@ -2,19 +2,19 @@
     <img src="https://avatars2.githubusercontent.com/u/50863181">
 </p>
 <p align="center">
-    <a href="https://github.com/ArmaForces/MadinAI/issues">
-        <img src="https://img.shields.io/github/issues-raw/ArmaForces/MadinAI.svg?label=Issues" alt="ArmaForces MadinAI Issues">
+    <a href="https://github.com/ArmaForces/MissionFramework/issues">
+        <img src="https://img.shields.io/github/issues-raw/ArmaForces/MissionFramework.svg?label=Issues" alt="ArmaForces MissionFramework Issues">
     </a>
-    <a href="https://github.com/ArmaForces/MadinAI/blob/master/LICENSE">
-        <img src="https://img.shields.io/badge/License-GPLv2-red.svg" alt="ArmaForces MadinAI License">
+    <a href="https://github.com/ArmaForces/MissionFramework/blob/master/LICENSE">
+        <img src="https://img.shields.io/badge/License-GPLv2-red.svg" alt="ArmaForces MissionFramework License">
     </a>
-    <a href="https://github.com/ArmaForces/MadinAI/actions">
-        <img src="https://github.com/ArmaForces/MadinAI/workflows/Arma/badge.svg">
+    <a href="https://github.com/ArmaForces/MissionFramework/actions">
+        <img src="https://github.com/ArmaForces/MissionFramework/workflows/Arma/badge.svg">
     </a>
 </p>
 <p align="center"><sup><strong>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases/latest">CBA</a>.</strong></sup></p>
 
-**MadinAI** is a Madin's own effort to enhance Arma 3 AI and add AI related modules for easier AI spawning and caching during missions.
+**ArmaForces - Mission Framework** is a collaborative effort of ArmaForces members (started by Madin) to enhance Arma 3 mission making process through adding modules for easier AI spawning and caching during missions.
 
 The mod is on the same foundation as the ACE3 mod, using its framework, systems, tools and standards. It is entirely **open-source** and licensed under the GNU General Public License ([GPLv2](https://github.com/ArmaForces/MadinAI/blob/master/LICENSE)).
 
