@@ -30,13 +30,13 @@ if (_activate) then {
 		[_logic, _groups] call FUNC(staticspawnInterval);
 	};
 	
-	private _activationTriggers = _logic getVariable ["activationTriggers" ,[]];
-	private _includeAir = _logic getVariable ["includeAir", false];
-	private _forceActivate = _logic getVariable ["forceActivate", false];
-	private _checkBuildings = _logic getVariable ["checkBuildings", true];
-	private _activateCondition = _logic getVariable ["activateCondition", {true}];
-	private _executionCodeUnit = _logic getVariable ["executionCodeUnit", {}];
-	private _executionCodeGroup = _logic getVariable ["executionCodeGroup", {}];
+	private _activationTriggers = _logic getVariable ["MAI_activationTriggers" ,[]];
+	private _includeAir = _logic getVariable ["MAI_includeAir", false];
+	private _forceActivate = _logic getVariable ["MAI_forceActivate", false];
+	private _checkBuildings = _logic getVariable ["MAI_checkBuildings", true];
+	private _activateCondition = _logic getVariable ["MAI_activateCondition", {true}];
+	private _executionCodeUnit = _logic getVariable ["MAI_executionCodeUnit", {}];
+	private _executionCodeGroup = _logic getVariable ["MAI_executionCodeGroup", {}];
 
 	private _owner = call MAI_fnc_HCfind;
 	[
