@@ -22,3 +22,6 @@
 
 // AFMF macros
 #define IS_MOD_LOADED(modclass)     (isClass (configFile >> "CfgPatches" >> #modclass))
+
+// AFMF Debug macros
+#include "\z\afmf\addons\main\script_debug.hpp"
