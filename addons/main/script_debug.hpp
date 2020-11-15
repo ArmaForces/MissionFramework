@@ -11,7 +11,7 @@
         if (isNil 'PREFIX##_PREP_RECOMPILE_BUTTON') then {\
             [] spawn {\
                 INFO('Adding Recompilation button');\
-                [['Recomp. PREFIX', 'Recompile functions of PREFIX'], {call PREFIX##_PREP_RECOMPILE}] call EFUNC(debug_console,addButton);\
+                [['Recomp. PREFIX', 'Recompile functions of PREFIX'], {call PREFIX##_PREP_RECOMPILE}] call afm_debug_console_fnc_addButton;\
             };\
             PREFIX##_PREP_RECOMPILE_BUTTON = true;\
         }
