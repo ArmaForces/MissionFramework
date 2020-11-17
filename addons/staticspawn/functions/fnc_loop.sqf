@@ -25,9 +25,9 @@ if (_groups isEqualTo []) exitWith {
 	_logic setVariable ["active", false];
 };
 
-private _checkBuildings = _logic getVariable ["checkBuildings", true];
-private _executionCodeUnit = _logic getVariable ["executionCodeUnit", {}];
-private _executionCodeGroup = _logic getVariable ["executionCodeGroup", {}];
+private _checkBuildings = _logic getVariable [QGVAR(checkBuildings), true];
+private _executionCodeUnit = _logic getVariable [QGVAR(executionCodeUnit), {}];
+private _executionCodeGroup = _logic getVariable [QGVAR(executionCodeGroup), {}];
 
 private _checkedUnits = 0;
 
@@ -118,10 +118,10 @@ private _checkedUnits = 0;
 		};
 
 		if !(_unit isEqualTo objNull) then {
-			_unit setVariable ["MAI_unitArray", _unitArray];
-			_unit setVariable ["MAI_groupID", _groupID];
-			_unit setVariable ["MAI_side", _side];
-			_unit setVariable ["MAI_logic", _logic];
+			_unit setVariable [QGVAR(unitArray), _unitArray];
+			_unit setVariable [QGVAR(groupID), _groupID];
+			_unit setVariable [QGVAR(side), _side];
+			_unit setVariable [[QGVAR(logic), _logic];
 			[_unit] call FUNC(despawnLoop);
 			_checkedUnits = _checkedUnits + 1;
 			_unit setUnitLoadout _loadout;

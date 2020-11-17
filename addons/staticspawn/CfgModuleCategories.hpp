@@ -30,7 +30,7 @@ class CfgVehicles
 			class AnyBrain;
 		};
 	};
-	class MAI_ModuleSimpleSpawn: Module_F
+	class MAI_Modulestaticspawn: Module_F
 	{
 		// Standard object definitions
 		scope = 2; // Editor visibility; 2 will show it in the menu, 1 will hide it.

@@ -30,13 +30,13 @@ if (_activate) then {
 		[_logic, _groups] call FUNC(staticspawnInterval);
 	};
 	
-	private _activationTriggers = _logic getVariable ["MAI_activationTriggers" ,[]];
-	private _includeAir = _logic getVariable ["MAI_includeAir", false];
-	private _forceActivate = _logic getVariable ["MAI_forceActivate", false];
-	private _checkBuildings = _logic getVariable ["MAI_checkBuildings", true];
-	private _activateCondition = _logic getVariable ["MAI_activateCondition", {true}];
-	private _executionCodeUnit = _logic getVariable ["MAI_executionCodeUnit", {}];
-	private _executionCodeGroup = _logic getVariable ["MAI_executionCodeGroup", {}];
+	private _activationTriggers = _logic getVariable [QGVAR(activationTriggers) ,[]];
+	private _includeAir = _logic getVariable [QGVAR(includeAir), false];
+	private _forceActivate = _logic getVariable [QGVAR(forceActivate), false];
+	private _checkBuildings = _logic getVariable [QGVAR(checkBuildings), true];
+	private _activateCondition = _logic getVariable [QGVAR(activateCondition), {true}];
+	private _executionCodeUnit = _logic getVariable [QGVAR(executionCodeUnit), {}];
+	private _executionCodeGroup = _logic getVariable [QGVAR(executionCodeGroup), {}];
 
 	private _owner = call MAI_fnc_HCfind;
 	[
@@ -49,7 +49,7 @@ if (_activate) then {
 		_activateCondition,
 		_executionCodeUnit,
 		_executionCodeGroup
-	] remoteExecCall ["MAI_fnc_staticSpawnFirstState",_owner,false];
+	] remoteExecCall [FUNC(firstState),_owner,false];
 } else {
 	[{_this call FUNC(WaitUntil)},
 	_this,

@@ -17,10 +17,10 @@
  */
 
 params [["_unit", objNull], ["_logic", objNull], ["_unitArray", 0]];
-private _groupID = _unit getVariable ["MAI_groupID", -1];
-private _groups = _logic getVariable ["groups", []];
-private _side = _unit getVariable ["AF_side", side _unit];
-private _active = _logic getVariable ["active", true];
+private _groupID = _unit getVariable [QGVAR(groupID), -1];
+private _groups = _logic getVariable [QGVAR(groups), []];
+private _side = _unit getVariable [QGVAR(AF_side), side _unit];
+private _active = _logic getVariable [QGVAR(active), true];
 private _group = group _unit;
 deleteVehicle _unit;
 if (_groups isEqualTo []) exitWith {

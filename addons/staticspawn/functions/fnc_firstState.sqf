@@ -29,13 +29,13 @@ params [
 ];
 
 if (_logic isEqualTo objNull) exitWith {};
-_logic setVariable ["MAI_activationTriggers", _activationTriggers];
-_logic setVariable ["MAI_groups", _groups];
-_logic setVariable ["MAI_includeAir", _includeAir];
-_logic setVariable ["MAI_forceActivate", _forceActivate];
-_logic setVariable ["MAI_checkBuildings", _checkBuildings];
-_logic setVariable ["MAI_activateCondition", _activateCondition];
-_logic setVariable ["MAI_executionCodeUnit", _executionCodeUnit];
-_logic setVariable ["MAI_executionCodePatrol", _executionCodeGroup];
+_logic setVariable [QGVAR(activationTriggers), _activationTriggers];
+_logic setVariable [QGVAR(groups), _groups];
+_logic setVariable [QGVAR(includeAir), _includeAir];
+_logic setVariable [QGVAR(forceActivate), _forceActivate];
+_logic setVariable [QGVAR(checkBuildings), _checkBuildings];
+_logic setVariable [QGVAR(activateCondition), _activateCondition];
+_logic setVariable [QGVAR(executionCodeUnit), _executionCodeUnit];
+_logic setVariable [QGVAR(executionCodePatrol), _executionCodeGroup];
 
 [_logic] call FUNC(interval);

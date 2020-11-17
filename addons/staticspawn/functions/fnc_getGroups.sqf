@@ -20,11 +20,11 @@ params [
 	["_groupsInput",[],[[]]], ["_logic", objNull, [objNull]]
 ];
 
-private _sphereSize = _logic getVariable ["MAI_sphereSize", 250];
-private _sphereBackDistance = _logic getVariable ["MAI_sphereBackDistance", 30];
-private _sphereDespawnDistance = _logic getVariable ["MAI_sphereDespawnDistance", 50];
-private _checkVisibility = _logic getVariable ["MAI_checkVisibility", true];
-private _forceSpawnDistance = _logic getVariable ["MAI_forceSpawnDistance", 0.35];
+private _sphereSize = _logic getVariable [QGVAR(sphereSize), 250];
+private _sphereBackDistance = _logic getVariable [QGVAR(sphereBackDistance), 30];
+private _sphereDespawnDistance = _logic getVariable [QGVAR(sphereDespawnDistance), 50];
+private _checkVisibility = _logic getVariable [QGVAR(checkVisibility), true];
+private _forceSpawnDistance = _logic getVariable [QGVAR(forceSpawnDistance), 0.35];
 private _groups = [];
 private _vehiclesInfo = [];
 //private _vehiclesToDelete = [];
@@ -123,11 +123,11 @@ private _vehiclesInfo = [];
 				_building = _object;
 				_buildingStatus = alive _object;
 			};
-			private _sphereSizeUnit = _unit getVariable ["MAI_sphereSize", _sphereSize];
-			private _sphereBackDistanceUnit = _unit getVariable ["MAI_sphereBackDistance", _sphereBackDistance];
-			private _sphereDespawnDistanceUnit = _unit getVariable ["MAI_sphereDespawnDistance", _sphereDespawnDistance];
-			private _checkVisibilityUnit = _unit getVariable ["MAI_checkVisibility", _checkVisibility];
-			private _forceSpawnDistanceUnit = _unit getVariable ["MAI_forceSpawnDistance", _forceSpawnDistance];
+			private _sphereSizeUnit = _unit getVariable [QGVAR(sphereSize), _sphereSize];
+			private _sphereBackDistanceUnit = _unit getVariable [QGVAR(sphereBackDistance), _sphereBackDistance];
+			private _sphereDespawnDistanceUnit = _unit getVariable [QGVAR(sphereDespawnDistance), _sphereDespawnDistance];
+			private _checkVisibilityUnit = _unit getVariable [QGVAR(checkVisibility), _checkVisibility];
+			private _forceSpawnDistanceUnit = _unit getVariable [QGVAR(forceSpawnDistance), _forceSpawnDistance];
 			_units pushBack [
 				_type,
 				_loadout,

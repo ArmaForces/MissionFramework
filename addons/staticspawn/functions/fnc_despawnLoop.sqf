@@ -18,9 +18,9 @@
 
 params [["_unit", objNull]];
 if (!alive _unit) exitWith {};
-private _logic = _unit getVariable ["MAI_logic", objNull];
+private _logic = _unit getVariable [[QGVAR(logic), objNull];
 if (!alive _logic) exitWith {};
-_unitArray = _unit getVariable ["MAI_unitArray", []];
+_unitArray = _unit getVariable [QGVAR(unitArray), []];
 if (_unitArray isEqualTo []) exitWith {};
 _unitArray params ["_type", "_loadout", "_pos", "_dir", "_stance", "_disabledAiFeatures", "_vehicleArray", "_building", "_buildingStatus", "_sphereSizeUnit", "_sphereBackDistanceUnit", "_sphereDespawnDistanceUnit"];
 if (_sphereDespawnDistanceUnit < 0) exitWith {};
