@@ -18,7 +18,7 @@
 
 params [["_unit", objNull]];
 if (!alive _unit) exitWith {};
-private _logic = _unit getVariable [[QGVAR(logic), objNull];
+private _logic = _unit getVariable [QGVAR(logic), objNull];
 if (!alive _logic) exitWith {};
 _unitArray = _unit getVariable [QGVAR(unitArray), []];
 if (_unitArray isEqualTo []) exitWith {};

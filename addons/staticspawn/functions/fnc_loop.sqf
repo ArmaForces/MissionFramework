@@ -20,7 +20,7 @@ params [
 	["_logic", objNull]
 ];
 if (_logic isEqualTo objNull) exitWith {};
-private _groups = _logic getVariable ["groups", []];
+private _groups = _logic getVariable [QGVAR(groups), []];
 if (_groups isEqualTo []) exitWith {
 	_logic setVariable ["active", false];
 };
@@ -121,7 +121,7 @@ private _checkedUnits = 0;
 			_unit setVariable [QGVAR(unitArray), _unitArray];
 			_unit setVariable [QGVAR(groupID), _groupID];
 			_unit setVariable [QGVAR(side), _side];
-			_unit setVariable [[QGVAR(logic), _logic];
+			_unit setVariable [QGVAR(logic), _logic];
 			[_unit] call FUNC(despawnLoop);
 			_checkedUnits = _checkedUnits + 1;
 			_unit setUnitLoadout _loadout;
@@ -137,11 +137,11 @@ private _checkedUnits = 0;
 
 } forEach _groups;
 
-_logic setVariable ["groups", _groups];
+_logic setVariable [QGVAR(groups), _groups];
 
 [
 	{
-		_this call MAI_fnc_staticSpawnInterval;
+		_this call FUNC(loop);
 	},
 	_this,
 	0

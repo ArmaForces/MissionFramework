@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params [["_unit", objNull], ["_logic", objNull], ["_unitArray", 0]];
+params [["_unit", objNull], ["_logic", objNull], ["_unitArray", []]];
 private _groupID = _unit getVariable [QGVAR(groupID), -1];
 private _groups = _logic getVariable [QGVAR(groups), []];
 private _side = _unit getVariable [QGVAR(AF_side), side _unit];
@@ -26,7 +26,7 @@ deleteVehicle _unit;
 if (_groups isEqualTo []) exitWith {
 	_groups pushBack [_groupID, _side, [_unitArray], group _unit];
 	if !(_active) then {
-		_logic setVariable ["active", true];
+		_logic setVariable [QGVAR(active), true];
 		_logic call FUNC(loop);
 	};
 };
@@ -34,7 +34,7 @@ private _groupIndex = _groups findIf {_x select 0 isEqualTo _groupID};
 if (_groupIndex isEqualTo -1) exitWith {
 	_groups pushBack [_groupID, _side, [_unitArray], group _unit];
 	if !(_active) then {
-		_logic setVariable ["active", true];
+		_logic setVariable [QGVAR(active), true];
 		_logic call FUNC(loop);
 	};
 };

@@ -49,9 +49,9 @@ if (_activate) then {
 		_activateCondition,
 		_executionCodeUnit,
 		_executionCodeGroup
-	] remoteExecCall [FUNC(firstState),_owner,false];
+	] remoteExecCall [QFUNC(firstState),_owner,false];
 } else {
-	[{_this call FUNC(WaitUntil)},
+	[{_this call QFUNC(WaitUntil)},
 	_this,
 	random [0.9,1,1.1]
 	] call CBA_fnc_waitAndExecute;

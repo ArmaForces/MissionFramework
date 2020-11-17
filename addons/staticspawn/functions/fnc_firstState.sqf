@@ -38,4 +38,4 @@ _logic setVariable [QGVAR(activateCondition), _activateCondition];
 _logic setVariable [QGVAR(executionCodeUnit), _executionCodeUnit];
 _logic setVariable [QGVAR(executionCodePatrol), _executionCodeGroup];
 
-[_logic] call FUNC(interval);
+[_logic] call FUNC(loop);
