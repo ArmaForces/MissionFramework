@@ -1,1 +1,1 @@
-#include "\z\MAI\addons\staticspawn\script_component.hpp"
+#include "\z\afmf\addons\staticspawn\script_component.hpp"
