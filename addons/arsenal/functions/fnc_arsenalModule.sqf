@@ -12,6 +12,10 @@
  * Public: No
  */
 
+if (!IS_MOD_LOADED(ace_arsenal)) exitWith {
+    ERROR("Can not add arsenal, ace_arsenal is not loaded");
+};
+
 [{
     params [
         ["_logic", objNull, [objNull]]
