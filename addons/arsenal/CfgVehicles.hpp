@@ -21,8 +21,15 @@ class CfgVehicles {
         class Attributes: AttributesBase {
             class GVAR(deleteUnits): Checkbox {
                 displayName = "Delete units";
-                property = GVAR(deleteUnits);
+                property = QGVAR(deleteUnits);
                 tooltip = "Should synchronized units be deleted after the arsenal is created";
+                defaultValue = "true";
+            };
+
+            class GVAR(playerItems): Checkbox {
+                displayName = "Add player items";
+                property = QGVAR(playerItems);
+                tooltip = "Should items from player loadout be added to arsenal (local effect)";
                 defaultValue = "true";
             };
 
