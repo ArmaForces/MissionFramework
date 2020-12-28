@@ -33,6 +33,13 @@ class CfgVehicles {
                 defaultValue = "true";
             };
 
+            class GVAR(allGoggles): Checkbox {
+                displayName = "Add all goggles";
+                property = QGVAR(allGoggles);
+                tooltip = "Should all goggles be available in arsenal";
+                defaultValue = "true";
+            };
+
             class ModuleDescription: ModuleDescription {};
         };
     };

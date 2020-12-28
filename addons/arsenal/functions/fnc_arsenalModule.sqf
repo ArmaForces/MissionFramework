@@ -23,11 +23,12 @@ if (!IS_MOD_LOADED(ace_arsenal)) exitWith {
 
     private _deleteUnits = _logic getVariable [QGVAR(deleteUnits), true];
     private _playerItems = _logic getVariable [QGVAR(playerItems), true];
+    private _allGoggles = _logic getVariable [QGVAR(allGoggles), true];
 
     private _syncedUnits = synchronizedObjects _logic select {_x isKindOf "CAManBase"};
     private _syncedObjects = synchronizedObjects _logic - _syncedUnits;
 
-    TRACE_3("Initializing arsenal module",_syncedUnits,_syncedObjects,_deleteUnits);
+    TRACE_5("Initializing arsenal module",_syncedUnits,_syncedObjects,_deleteUnits,_playerItems,_allGoggles);
 
     private _gear = [];
     {
@@ -35,6 +36,10 @@ if (!IS_MOD_LOADED(ace_arsenal)) exitWith {
 
         if (_deleteUnits) then {deleteVehicle _x};
     } forEach _syncedUnits;
+
+    if (_allGoggles) then {
+        _gear append (("getNumber (_x >> 'scope') > 0" configClasses (configfile >> "CfgGlasses")) apply {configName _x});
+    };
 
     // remove duplicates
     _gear = _gear arrayIntersect _gear;
