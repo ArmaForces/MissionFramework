@@ -6,12 +6,14 @@ class CfgVehicles {
             class Checkbox;
             class ModuleDescription;
         };
+
+        class ModuleDescription {};
     };
 
     class GVAR(arsenal): Module_F {
         scope = 2;
-        displayName = "Arsenal";
-        category = "afm";
+        displayName = CSTRING(Module_DisplayName);
+        category = QUOTE(PREFIX);
 
         function = QFUNC(arsenalModule);
 
@@ -22,27 +24,38 @@ class CfgVehicles {
 
         class Attributes: AttributesBase {
             class GVAR(deleteUnits): Checkbox {
-                displayName = "Delete units";
+                displayName = CSTRING(Module_Attribute_DeleteUnits);
                 property = QGVAR(deleteUnits);
-                tooltip = "Should synchronized units be deleted after the arsenal is created";
+                tooltip = CSTRING(Module_Attribute_DeleteUnits_Description);
                 defaultValue = "true";
             };
 
             class GVAR(playerItems): Checkbox {
-                displayName = "Add player items";
+                displayName = CSTRING(Module_Attribute_PlayerItems);
                 property = QGVAR(playerItems);
-                tooltip = "Should items from player loadout be added to arsenal (local effect)";
+                tooltip = CSTRING(Module_Attribute_PlayerItems_Description);
                 defaultValue = "true";
             };
 
             class GVAR(allGoggles): Checkbox {
-                displayName = "Add all goggles";
+                displayName = CSTRING(Module_Attribute_AllGoggles);
                 property = QGVAR(allGoggles);
-                tooltip = "Should all goggles be available in arsenal";
+                tooltip = CSTRING(Module_Attribute_AllGoggles_Description);
                 defaultValue = "true";
             };
 
             class ModuleDescription: ModuleDescription {};
+        };
+
+        // Module description. Must inherit from base class, otherwise pre-defined entities won't be available
+        class ModuleDescription: ModuleDescription {
+            description[] = {
+                CSTRING(Module_Description_UnitsObjects),
+                "",
+                CSTRING(Module_Description_Inventories),
+                "",
+                CSTRING(Module_Description_Multiple)
+            };
         };
     };
 };
