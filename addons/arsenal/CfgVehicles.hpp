@@ -17,7 +17,8 @@ class CfgVehicles {
 
         isGlobal = 0;
         isDisposable = 1;
-        isTriggerActivated = 1;
+        // custom trigger activation handling in code
+        isTriggerActivated = 0;
 
         class Attributes: AttributesBase {
             class GVAR(deleteUnits): Checkbox {

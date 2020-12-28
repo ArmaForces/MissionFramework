@@ -21,14 +21,18 @@ if (!IS_MOD_LOADED(ace_arsenal)) exitWith {
         ["_logic", objNull, [objNull]]
     ];
 
+    TRACE_1("Initializing arsenal module",_logic);
+
     private _deleteUnits = _logic getVariable [QGVAR(deleteUnits), true];
     private _playerItems = _logic getVariable [QGVAR(playerItems), true];
     private _allGoggles = _logic getVariable [QGVAR(allGoggles), true];
+    TRACE_4("Module attributes",_deleteUnits,_playerItems,_allGoggles);
 
-    private _syncedUnits = synchronizedObjects _logic select {_x isKindOf "CAManBase"};
-    private _syncedObjects = synchronizedObjects _logic - _syncedUnits;
-
-    TRACE_5("Initializing arsenal module",_syncedUnits,_syncedObjects,_deleteUnits,_playerItems,_allGoggles);
+    private _syncedObjects = synchronizedObjects _logic;
+    private _syncedUnits = _syncedObjects select {_x isKindOf "CAManBase"};
+    private _syncedTriggers = _syncedObjects select {_x isKindOf "EmptyDetector"};
+    private _syncedArsenals = _syncedObjects - _syncedUnits - _syncedTriggers;
+    TRACE_3("Module synced",_syncedUnits,_syncedTriggers,_syncedArsenals);
 
     private _gear = [];
     {
@@ -44,13 +48,18 @@ if (!IS_MOD_LOADED(ace_arsenal)) exitWith {
     // remove duplicates
     _gear = _gear arrayIntersect _gear;
 
-    {
-        TRACE_3("Adding arsenal to object",_x,_gear,_playerItems);
+    // wait for all synced triggers to be activated
+    [{(_this select 0) findIf {!triggerActivated _x} == -1}, {
+        params ["", "_syncedArsenals", "_gear", "_playerItems"];
 
-        private _id = [QGVAR(addArsenal), [_x, _gear, _playerItems]] call CBA_fnc_globalEventJIP;
-        // remove event after arsenal object will be deleted
-        [_id, _x] call CBA_fnc_removeGlobalEventJIP;
-    } forEach _syncedObjects;
+        {
+            TRACE_3("Adding arsenal to object",_x,_gear,_playerItems);
+
+            private _id = [QGVAR(addArsenal), [_x, _gear, _playerItems]] call CBA_fnc_globalEventJIP;
+            // remove event after arsenal object will be deleted
+            [_id, _x] call CBA_fnc_removeGlobalEventJIP;
+        } forEach _syncedArsenals;
+    }, [_syncedTriggers, _syncedArsenals, _gear, _playerItems]] call CBA_fnc_waitUntilAndExecute;
 
 }, _this] call CBA_fnc_directCall;
 
