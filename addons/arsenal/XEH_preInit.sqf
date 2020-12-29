@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 [QGVAR(addArsenal), {
-    [{!isNull player}, {
+    [{!isNull player && {time > 5}}, {
         params ["_object", "_items", "_addPlayerItems"];
 
         TRACE_3("Adding local arsenal to object",_object,_items,_addPlayerItems);
