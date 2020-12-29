@@ -43,5 +43,10 @@
             <English>Multiple modules can be synchronized to same object to for example "unlock" additional gear with trigger.</English>
             <Polish>Wiele modułów może być zsynchronizowane do tego samego obiektu aby np. "odblokować dodatkowe wyposażenie za pomocą triggera.</Polish>
         </Key>
+        <!-- 3DEN -->
+        <Key ID="STR_AFMF_Arsenal_3DEN_Categories">
+            <English>Enabled categories</English>
+            <Polish>Dostępne kategorie</Polish>
+        </Key>
     </Package>
 </Project>

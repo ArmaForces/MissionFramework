@@ -5,6 +5,14 @@ class CfgVehicles {
             class Default;
             class Checkbox;
             class ModuleDescription;
+
+            class GVAR(categories): Default {
+                control = QGVAR(categories);
+                displayName = CSTRING(3DEN_Categories);
+                defaultValue = QUOTE('ATTRIBUTE_CATEGORIES_DEFAULT_VALUE');
+                expression = QUOTE(_this setVariable [ARR_2('%s',parseSimpleArray _value)]);
+                validate = "none";
+            };
         };
 
         class ModuleDescription {};
@@ -42,6 +50,11 @@ class CfgVehicles {
                 property = QGVAR(allGoggles);
                 tooltip = CSTRING(Module_Attribute_AllGoggles_Description);
                 defaultValue = "true";
+            };
+
+            class GVAR(categories): GVAR(categories) {
+                displayName = "test";
+                property = QGVAR(categories);
             };
 
             class ModuleDescription: ModuleDescription {};
