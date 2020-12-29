@@ -15,7 +15,7 @@ PREP_RECOMPILE_END;
             _items append (player call FUNC(getUnitGear));
         };
 
-        [_object, []] call ACEFUNC(arsenal,initBox);
+        [_object] call FUNC(initBox);
         [_object, _items] call ACEFUNC(arsenal,addVirtualItems);
     }, _this] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;
