@@ -25,6 +25,7 @@ private _categoriesIdcs = ARSENAL_CATEGORIES_IDCS;
 TRACE_2("Handling arsenal open",count _enabledCategories,count _categoriesIdcs);
 
 // disable arsenal categories
+private _firstEnabledIDC = -1;
 {
     private _enabled = _enabledCategories select _forEachIndex;
     if (!_enabled) then {
@@ -33,7 +34,17 @@ TRACE_2("Handling arsenal open",count _enabledCategories,count _categoriesIdcs);
         _ctrl ctrlEnable false;
         _ctrl ctrlSetFade 0.6;
         _ctrl ctrlCommit 0;
+    } else {
+        if (_firstEnabledIDC == -1) then {
+            _firstEnabledIDC = _x;
+        };
     };
 } forEach _categoriesIdcs;
+
+// focus first enabled category
+[{
+    params ["_display", "_idc"];
+    [_display, _display displayCtrl _idc] call ace_arsenal_fnc_fillLeftPanel;
+}, [_display, _firstEnabledIDC]] call CBA_fnc_execNextFrame;
 
 nil
