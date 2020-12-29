@@ -26,7 +26,8 @@ if (!IS_MOD_LOADED(ace_arsenal)) exitWith {
     private _deleteUnits = _logic getVariable [QGVAR(deleteUnits), true];
     private _playerItems = _logic getVariable [QGVAR(playerItems), true];
     private _allGoggles = _logic getVariable [QGVAR(allGoggles), true];
-    TRACE_4("Module attributes",_deleteUnits,_playerItems,_allGoggles);
+    private _categories = _logic getVariable [QGVAR(categories), ATTRIBUTE_CATEGORIES_DEFAULT_VALUE];
+    TRACE_4("Module attributes",_deleteUnits,_playerItems,_allGoggles,_categories);
 
     private _syncedObjects = synchronizedObjects _logic;
     private _syncedUnits = _syncedObjects select {_x isKindOf "CAManBase"};
@@ -50,16 +51,17 @@ if (!IS_MOD_LOADED(ace_arsenal)) exitWith {
 
     // wait for all synced triggers to be activated
     [{(_this select 0) findIf {!triggerActivated _x} == -1}, {
-        params ["", "_syncedArsenals", "_gear", "_playerItems"];
+        params ["", "_syncedArsenals", "_gear", "_playerItems", "_categories"];
 
         {
-            TRACE_3("Adding arsenal to object",_x,_gear,_playerItems);
+            TRACE_3("Adding arsenal to object",_x,_playerItems,_categories);
+            TRACE_1("",_gear);
 
-            private _id = [QGVAR(addArsenal), [_x, _gear, _playerItems]] call CBA_fnc_globalEventJIP;
+            private _id = [QGVAR(addArsenal), [_x, _gear, _playerItems, _categories]] call CBA_fnc_globalEventJIP;
             // remove event after arsenal object will be deleted
             [_id, _x] call CBA_fnc_removeGlobalEventJIP;
         } forEach _syncedArsenals;
-    }, [_syncedTriggers, _syncedArsenals, _gear, _playerItems]] call CBA_fnc_waitUntilAndExecute;
+    }, [_syncedTriggers, _syncedArsenals, _gear, _playerItems, _categories]] call CBA_fnc_waitUntilAndExecute;
 
 }, _this] call CBA_fnc_directCall;
 

@@ -30,6 +30,7 @@ private _action = [
     "\A3\Ui_f\data\GUI\Rsc\RscDisplayArsenal\spaceArsenal_ca.paa",
     {
         params ["_target", "_player"];
+        GVAR(currentBox) = _target;
         [_target, _player] call ACEFUNC(arsenal,openBox);
     },
     {
