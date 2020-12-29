@@ -31,6 +31,11 @@ class CfgVehicles {
         isTriggerActivated = 0;
 
         class Attributes: AttributesBase {
+            class GVAR(categories): GVAR(categories) {
+                displayName = CSTRING(3DEN_Categories);
+                property = QGVAR(categories);
+            };
+
             class GVAR(deleteUnits): Checkbox {
                 displayName = CSTRING(Module_Attribute_DeleteUnits);
                 property = QGVAR(deleteUnits);
@@ -52,15 +57,9 @@ class CfgVehicles {
                 defaultValue = "true";
             };
 
-            class GVAR(categories): GVAR(categories) {
-                displayName = "test";
-                property = QGVAR(categories);
-            };
-
             class ModuleDescription: ModuleDescription {};
         };
 
-        // Module description. Must inherit from base class, otherwise pre-defined entities won't be available
         class ModuleDescription: ModuleDescription {
             description[] = {
                 CSTRING(Module_Description_UnitsObjects),

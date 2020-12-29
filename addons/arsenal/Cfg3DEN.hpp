@@ -6,7 +6,7 @@ class Cfg3DEN {
             x = QUOTE(0);
             y = QUOTE(0);
             w = QUOTE(130 * ATTRIBUTE_W);
-            h = QUOTE(106.83 * ATTRIBUTE_H);
+            h = QUOTE(19 * ATTRIBUTE_H);
 
             attributeLoad = QUOTE([ARR_2(_this,_value)] call FUNC(attributeCategoriesLoad));
             attributeSave = QUOTE(_this call FUNC(attributeCategoriesSave));
@@ -27,9 +27,11 @@ class Cfg3DEN {
                     idc = IDC_ATTRIBUTE_CATEGORIES;
 
                     x = QUOTE(5 * ATTRIBUTE_W);
-                    y = QUOTE(10 * ATTRIBUTE_H);
+                    y = QUOTE(7 * ATTRIBUTE_H);
                     w = QUOTE(125 * ATTRIBUTE_W);
                     h = QUOTE(10 * ATTRIBUTE_H);
+
+                    colorSelectedBg[] = {0,0,0,0.5};
 
                     rows = 1;
                     columns = 18;
