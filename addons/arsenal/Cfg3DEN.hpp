@@ -33,6 +33,8 @@ class Cfg3DEN {
 
                     colorSelectedBg[] = {0,0,0,0.5};
 
+                    onCheckBoxesSelChanged = QUOTE(call FUNC(attributeCategoriesValidate));
+
                     rows = 1;
                     columns = 18;
 

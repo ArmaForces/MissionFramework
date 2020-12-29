@@ -48,5 +48,9 @@
             <English>Enabled categories</English>
             <Polish>Dostępne kategorie</Polish>
         </Key>
+        <Key ID="STR_AFMF_Arsenal_3DEN_Categories_Invalid">
+            <English>At least one category must be enabled</English>
+            <Polish>Co najmniej jedna kategoria musi pozostać włączona</Polish>
+        </Key>
     </Package>
 </Project>

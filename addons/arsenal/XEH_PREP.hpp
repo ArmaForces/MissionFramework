@@ -5,3 +5,4 @@ PREP(onArsenalOpened);
 
 PREP(attributeCategoriesLoad);
 PREP(attributeCategoriesSave);
+PREP(attributeCategoriesValidate);
