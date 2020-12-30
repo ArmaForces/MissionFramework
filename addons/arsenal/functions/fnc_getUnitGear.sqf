@@ -36,15 +36,9 @@ if (IS_MOD_LOADED(acre_main)) then {
 _items append (
     (weapons _unit apply {_x call BIS_fnc_baseWeapon}) + magazines _unit
     +
-    [headgear _unit] + [goggles _unit]
+    [headgear _unit, goggles _unit, backpack _unit, uniform _unit, vest _unit]
     +
     assignedItems _unit
-    +
-    [backpack _unit]
-    +
-    [uniform _unit]
-    +
-    [vest _unit]
     +
     primaryWeaponItems _unit + secondaryWeaponItems _unit + handgunItems _unit
 );
