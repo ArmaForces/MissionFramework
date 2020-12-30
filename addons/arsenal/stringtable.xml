@@ -48,6 +48,10 @@
             <English>Enabled categories</English>
             <Polish>Dostępne kategorie</Polish>
         </Key>
+        <Key ID="STR_AFMF_Arsenal_3DEN_Categories_Tooltip">
+            <English>Categories that will be available in arsenal.</English>
+            <Polish>Kategorie które bedą dostępne w arsenale.</Polish>
+        </Key>
         <Key ID="STR_AFMF_Arsenal_3DEN_Categories_Invalid">
             <English>At least one category must be enabled</English>
             <Polish>Co najmniej jedna kategoria musi pozostać włączona</Polish>

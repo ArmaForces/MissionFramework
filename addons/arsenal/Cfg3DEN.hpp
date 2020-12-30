@@ -16,7 +16,7 @@ class Cfg3DEN {
                     idc = -1;
 
                     text = CSTRING(3DEN_Categories);
-                    tooltip = "Catogries that will be available in arsenal";
+                    tooltip = CSTRING(3DEN_Categories_Tooltip);
 
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(0);
