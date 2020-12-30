@@ -10,7 +10,7 @@ PREP_RECOMPILE_END;
         params ["_object", "_items", "_addPlayerItems", "_categories"];
 
         TRACE_3("Adding local arsenal to object",_object,_addPlayerItems,_categories);
-        TRACE_1("", _items);
+        TRACE_1("",_items);
 
         if (_addPlayerItems) then {
             _items append (player call FUNC(getUnitGear));
