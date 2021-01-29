@@ -37,6 +37,6 @@ headerexts = [
 
 [scripts.publish]
     steps_windows = [
-        "powershell ./tools/Publish.ps1 {{version}} 1934142795 '@armaforces_mission_framework'"
+        "powershell ./tools/Publish.ps1 {{version}} 2377030287 '@armaforces_mission_framework'"
     ]
     show_output = true
