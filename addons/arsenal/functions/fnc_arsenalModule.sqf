@@ -38,8 +38,9 @@ if (!IS_MOD_LOADED(ace_arsenal)) exitWith {
     if (_syncedUnits isEqualTo [] && {!_playerItems}) then {
         ERROR_MSG("Arsenal module has no synchronized units!");
     };
-    if (_syncedArsenals isEqualTo []) then {
+    if (_syncedArsenals isEqualTo []) exitWith {
         ERROR_MSG("Arsenal module has no synchronized arsenal objects!");
+        nil
     };
 
     private _gear = [];
