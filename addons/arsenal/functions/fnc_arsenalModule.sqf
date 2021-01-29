@@ -35,6 +35,13 @@ if (!IS_MOD_LOADED(ace_arsenal)) exitWith {
     private _syncedArsenals = _syncedObjects - _syncedUnits - _syncedTriggers;
     TRACE_3("Module synced",_syncedUnits,_syncedTriggers,_syncedArsenals);
 
+    if (_syncedUnits isEqualTo [] && {!_playerItems}) then {
+        ERROR_MSG("Arsenal module has no synchronized units!");
+    };
+    if (_syncedArsenals isEqualTo []) then {
+        ERROR_MSG("Arsenal module has no synchronized arsenal objects!");
+    };
+
     private _gear = [];
     {
         _gear append (_x call FUNC(getUnitGear));
