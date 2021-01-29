@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFMF">
+    <Package name="Arsenal">
+        <Key ID="STR_AFMF_Arsenal_Module_DisplayName">
+            <English>Arsenal</English>
+            <Polish>Arsenał</Polish>
+        </Key>
+        <!-- Attributes -->
+        <Key ID="STR_AFMF_Arsenal_Module_Attribute_DeleteUnits">
+            <English>Delete synchronized units</English>
+            <Polish>Usuń zsynchronizowane jednostki</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Arsenal_Module_Attribute_DeleteUnits_Description">
+            <English>Units synchronized to module will be deleted after arsenal initialization.</English>
+            <Polish>Jednostki zsynchronizowane do modułu zostaną usunięte po inicjalizacji arsenału.</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Arsenal_Module_Attribute_PlayerItems">
+            <English>Add player inventory</English>
+            <Polish>Dodaj ekwipunek gracza</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Arsenal_Module_Attribute_PlayerItems_Description">
+            <English>Items from player loadout will be added to arsenal. (local effect)</English>
+            <Polish>Przedmioty z ekwipunku gracza zostaną dodane do arsenału. (lokalny efekt)</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Arsenal_Module_Attribute_AllGoggles">
+            <English>Add all goggles</English>
+            <Polish>Dodaj wszystkie goggle</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Arsenal_Module_Attribute_AllGoggles_Description">
+            <English>All goggles will be available in arsenal.</English>
+            <Polish>Wszystkie goggle bedą dostępne w arsenale.</Polish>
+        </Key>
+        <!-- Description -->
+        <Key ID="STR_AFMF_Arsenal_Module_Description_UnitsObjects">
+            <English>Synchronize at least one unit and object.</English>
+            <Polish>Zsynchronizuj conajmniej jedną jednostkę i obiekt.</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Arsenal_Module_Description_Inventories">
+            <English>Inventories of synchronized units are added to all synchronized objects as ACE Arsenal.</English>
+            <Polish>Ekwipunki zsynchronizowanych jednostek zostają dodane do zsynchronizowanych obiektów jako ACE Arsenał.</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Arsenal_Module_Description_Multiple">
+            <English>Multiple modules can be synchronized to same object to for example "unlock" additional gear with trigger.</English>
+            <Polish>Wiele modułów może być zsynchronizowane do tego samego obiektu aby np. "odblokować dodatkowe wyposażenie za pomocą triggera.</Polish>
+        </Key>
+        <!-- 3DEN -->
+        <Key ID="STR_AFMF_Arsenal_3DEN_Categories">
+            <English>Enabled categories</English>
+            <Polish>Dostępne kategorie</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Arsenal_3DEN_Categories_Tooltip">
+            <English>Categories that will be available in arsenal.</English>
+            <Polish>Kategorie które bedą dostępne w arsenale.</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Arsenal_3DEN_Categories_Invalid">
+            <English>At least one category must be enabled</English>
+            <Polish>Co najmniej jedna kategoria musi pozostać włączona</Polish>
+        </Key>
+    </Package>
+</Project>
