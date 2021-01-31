@@ -6,7 +6,14 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 [QGVAR(addArsenal), {
-    [{!isNull player && {time > 1}}, {
+    [{
+        !isNull player
+        && {time > 1}
+        && {
+            !IS_MOD_LOADED(acre_main)
+            || {!isNil "acre_api_fnc_isInitialized" && {[] call acre_api_fnc_isInitialized}}
+        }
+    }, {
         params ["_object", "_items", "_addPlayerItems", "_categories"];
 
         TRACE_3("Adding local arsenal to object",_object,_addPlayerItems,_categories);
