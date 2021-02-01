@@ -4,6 +4,13 @@ class CfgVehicles {
         class ACE_Actions;
     };
     class Land_GuardTower_02_F: House_F {
+        class AnimationSources {
+            class Lights_Hide {
+                // unhide lights by default
+                initPhase = 0;
+            };
+        };
+
         class ACE_Actions: ACE_Actions {
             class GVAR(lightsOn1) {
                 displayName = "$STR_ACTION_LIGHTS_ON";
