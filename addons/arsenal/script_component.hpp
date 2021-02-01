@@ -4,8 +4,8 @@
 #include "\a3\ui_f\hpp\defineResincl.inc"
 #include "\a3\ui_f\hpp\defineCommonColors.inc"
 
-#define DEBUG_MODE_FULL
-#define DISABLE_COMPILE_CACHE
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
 
 #ifdef DEBUG_ENABLED_ARSENAL
     #define DEBUG_MODE_FULL
