@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFMF">
+    <Package name="Buildables">
+        <Key ID="STR_AFMF_Buildables_AreaModule_DisplayName">
+            <English>Buildable area</English>
+            <Polish>Budowalny obszar</Polish>
+        </Key>
+        <!-- Attributes -->
+        <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_Layer">
+            <English>Editor layer</English>
+            <Polish>Warstwa edytora</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_Layer_Description">
+            <English>Editor layer that contains objects to be built after supplies will be delivered to the module area.</English>
+            <Polish>Warstwa edytora która zostanie zbudowana po dostarczeniu skyrzni zaopatrzeniowych do obszaru modułu.</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_SupplyCrates">
+            <English>Supply crates types</English>
+            <Polish>Typy skrzynek zaopatrzeniowych</Polish>
+        </Key>
+
+        <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_RequiredSupplies">
+            <English>Required amount of supply crates</English>
+            <Polish>Ilość potrzebnych skrzyni zaopatrzeniowych</Polish>
+        </Key>
+
+        <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_BuildTime">
+            <English>Build time (s)</English>
+            <Polish>Czas budowy (s)</Polish>
+        </Key>
+
+        <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_HideObjects">
+            <English>Hide layer objects</English>
+            <Polish>Ukryj obiekty warstwy</Polish>
+        </Key>
+        <!-- Description -->
+        <Key ID="STR_AFMF_Buildables_AreaModule_Description">
+            <English>Lorem ipsum.</English>
+            <Polish>Lorem ipsum..</Polish>
+        </Key>
+    </Package>
+</Project>
