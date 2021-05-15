@@ -85,7 +85,7 @@ class CfgVehicles {
 
                 property = QGVAR(hideObjects);
 
-                defaultValue "true";
+                defaultValue = "true";
             };
 
             class ModuleDescription: ModuleDescription {};
