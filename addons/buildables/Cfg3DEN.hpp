@@ -22,7 +22,7 @@ class Cfg3DEN {
             class Controls: Controls {
                 class Title: Title {};
                 class Value: Value {
-                    onLoad = QUOTE(call (uiNamespace getVariable QQFUNC(attributeModuleLayersLoad)));
+                    onLoad = QUOTE(call (uiNamespace getVariable QQFUNC(attributeLayersLoad)));
                 };
             };
         };
@@ -36,8 +36,8 @@ class Cfg3DEN {
             w = QUOTE(130 * ATTRIBUTE_W);
             h = QUOTE((10 + 5 + 5 + 25) * ATTRIBUTE_H);
 
-            attributeLoad = "";
-            attributeSave = "";
+            attributeLoad = QUOTE([ARR_2(_this, _value)] call FUNC(attributeTwoPanelLoad));
+            attributeSave = QUOTE([_this] call FUNC(attributeTwoPanelSave));
 
             class Controls {
                 #define COL_W 55
@@ -73,7 +73,8 @@ class Cfg3DEN {
                         params ['_tv'];\
                         _classes = ""getNumber (_x >> 'scope') == 2"" configClasses (configFile >> 'CfgVehicles');\
                         {\
-                            _tv tvAdd [[], configName _x];\
+                            _idx = _tv tvAdd [[], getText (_x >> 'displayName')];\
+                            _tv tvSetData [[_idx], configName _x];\
                         } forEach _classes;\
                     ";
 

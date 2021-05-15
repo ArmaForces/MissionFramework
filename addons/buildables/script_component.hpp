@@ -12,3 +12,6 @@
 // 3DEN Attribute
 #define ATTRIBUTE_W (pixelW * pixelGrid * 0.5)
 #define ATTRIBUTE_H (pixelH * pixelGrid * 0.5)
+
+#define IDC_ATTRIBUTE_TWOPANEL_CLASSES 100
+#define IDC_ATTRIBUTE_TWOPANEL_LIST 101

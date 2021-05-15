@@ -1,3 +1,5 @@
 PREP(areaModule);
 
-PREP(attributeModuleLayersLoad);
+PREP(attributeLayersLoad);
+PREP(attributeTwoPanelLoad);
+PREP(attributeTwoPanelSave);
