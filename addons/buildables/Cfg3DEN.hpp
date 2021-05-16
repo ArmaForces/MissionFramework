@@ -69,14 +69,7 @@ class Cfg3DEN {
                     idc = 100;
                     idcSearch = 123;
 
-                    onLoad = "\
-                        params ['_tv'];\
-                        _classes = ""getNumber (_x >> 'scope') == 2"" configClasses (configFile >> 'CfgVehicles');\
-                        {\
-                            _idx = _tv tvAdd [[], getText (_x >> 'displayName')];\
-                            _tv tvSetData [[_idx], configName _x];\
-                        } forEach _classes;\
-                    ";
+                    onLoad = QUOTE(_this call FUNC(attributeTwoPanelClassesLoad));
 
                     colorBackground[] = {0,0,0,0.5};
 
@@ -89,6 +82,8 @@ class Cfg3DEN {
                 class ButtonAdd: ctrlButton {
                     text = "+";
 
+                    onButtonClick = QUOTE(_this call FUNC(attributeTwoPanelAdd));
+
                     x = QUOTE( (COL_W + BTN_W / 2 + BTN_W / 3 + 2.5) * ATTRIBUTE_W);
                     y = QUOTE(20 * ATTRIBUTE_H);
                     w = QUOTE( BTN_W * ATTRIBUTE_W);
@@ -96,6 +91,8 @@ class Cfg3DEN {
                 };
                 class ButtonRemove: ctrlButton {
                     text = "-";
+
+                    onButtonClick = QUOTE(_this call FUNC(attributeTwoPanelRemove));
 
                     x = QUOTE( (COL_W + BTN_W / 2 + BTN_W / 3 + 2.5) * ATTRIBUTE_W);
                     y = QUOTE(30 * ATTRIBUTE_H);

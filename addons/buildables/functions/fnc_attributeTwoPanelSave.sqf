@@ -1,17 +1,13 @@
 #include "script_component.hpp"
 /*
- * Author: <author>
- * Function description
+ * Author: veteran29
+ * Serialize selected classes for Eden attribute save.
  *
  * Arguments:
- * 0: Objects <ARRAY>
- * 1: All <BOOL>
+ * 0: Eden attribute control group <CONTROL>
  *
  * Return Value:
  * None
- *
- * Example:
- * [[bob, ted], false] call afmf_main_fnc_example
  *
  * Public: No
  */
@@ -23,7 +19,7 @@ TRACE_1("Save",_ctrlGrp);
 private _ctrlList = _ctrlGrp controlsGroupCtrl IDC_ATTRIBUTE_TWOPANEL_LIST;
 
 private _items = [];
-for "_i" from 0 to lbSize _ctrlList do {
+for "_i" from 0 to lbSize _ctrlList - 1 do {
     _items pushBack (_ctrlList lbData _i);
 };
 

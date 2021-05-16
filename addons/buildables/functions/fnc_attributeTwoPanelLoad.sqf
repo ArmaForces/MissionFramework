@@ -18,16 +18,8 @@ params ["_ctrlGrp", "_value"];
 TRACE_2("Load",_ctrlGrp,_value);
 
 private _ctrlList = _ctrlGrp controlsGroupCtrl IDC_ATTRIBUTE_TWOPANEL_LIST;
+private _items = parseSimpleArray _value;
 
-private _cfgVehicles = configFile >> "CfgVehicles";
-{
-    if (isClass (_cfgVehicles >> _x)) then {
-        private _idx = _ctrlList lbAdd getText (_cfgVehicles >> _x >> "displayName");
-        _ctrlList lbSetData [_idx, _x];
-    } else {
-        private _idx = _ctrlList lbAdd _x;
-        _ctrlList lbSetData [_idx, _x];
-    };
-} forEach parseSimpleArray _value;
+[_ctrlList, _items] call FUNC(attributeTwoPanelListAdd);
 
 nil
