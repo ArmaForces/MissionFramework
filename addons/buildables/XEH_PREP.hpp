@@ -1,3 +1,6 @@
+PREP(areaInit);
+PREP(addSupplyDeliverAction);
+
 PREP(areaModule);
 
 PREP(attributeLayersLoad);

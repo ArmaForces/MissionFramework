@@ -70,7 +70,6 @@ class CfgVehicles {
 
                 validate = "number";
                 defaultValue = "1";
-                expression = "_this setVariable ['%s',_value max 1];";
             };
 
             class GVAR(buildTime): Edit {
@@ -81,7 +80,6 @@ class CfgVehicles {
 
                 validate = "number";
                 defaultValue = "60";
-                expression = "_this setVariable ['%s',_value max 0];";
             };
 
             class GVAR(hideObjects): Checkbox {

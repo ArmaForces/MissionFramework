@@ -46,8 +46,8 @@ class Cfg3DEN {
                 class CategoriesTitle: ctrlStatic {
                     idc = -1;
 
-                    displayName = CSTRING(AreaModule_Attribute_supplyCrates);
-                    tooltip = CSTRING(AreaModule_Attribute_supplyCrates_Description);
+                    text = CSTRING(AreaModule_Attribute_SupplyCrates);
+                    tooltip = CSTRING(AreaModule_Attribute_SupplyCrates_Description);
 
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(0);
