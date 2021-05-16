@@ -16,11 +16,11 @@ params ['_btn'];
 
 private _ctrlGrp = ctrlParentControlsGroup _btn;
 
-private _ctrlList = _ctrlGrp controlsGroupCtrl IDC_ATTRIBUTE_TWOPANEL_LIST;
-private _ctrlTv = _ctrlGrp controlsGroupCtrl IDC_ATTRIBUTE_TWOPANEL_CLASSES;
+private _ctrlList = _ctrlGrp controlsGroupCtrl IDC_ATTRIBUTE_SUPPLYCLASSES_LIST;
+private _ctrlTv = _ctrlGrp controlsGroupCtrl IDC_ATTRIBUTE_SUPPLYCLASSES_CLASSES;
 
 private _selectedClass = _ctrlTv tvData tvCurSel _ctrlTv;
 
-[_ctrlList, [_selectedClass]] call FUNC(attributeTwoPanelListAdd);
+[_ctrlList, [_selectedClass]] call FUNC(attributeSupplyClassesListAdd);
 
 nil

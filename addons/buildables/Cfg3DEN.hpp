@@ -27,7 +27,7 @@ class Cfg3DEN {
             };
         };
 
-        class GVAR(twoPanel): ctrlControlsGroupNoScrollbars {
+        class GVAR(supplyClasses): ctrlControlsGroupNoScrollbars {
 
             idc = -1;
 
@@ -36,8 +36,8 @@ class Cfg3DEN {
             w = QUOTE(130 * ATTRIBUTE_W);
             h = QUOTE((10 + 5 + 5 + 25) * ATTRIBUTE_H);
 
-            attributeLoad = QUOTE([ARR_2(_this, _value)] call FUNC(attributeTwoPanelLoad));
-            attributeSave = QUOTE([_this] call FUNC(attributeTwoPanelSave));
+            attributeLoad = QUOTE([ARR_2(_this, _value)] call FUNC(attributeSupplyClassesLoad));
+            attributeSave = QUOTE([_this] call FUNC(attributeSupplyClassesSave));
 
             class Controls {
                 #define COL_W 55
@@ -46,8 +46,8 @@ class Cfg3DEN {
                 class CategoriesTitle: ctrlStatic {
                     idc = -1;
 
-                    text = "Title";
-                    tooltip = "Tooltip";
+                    displayName = CSTRING(AreaModule_Attribute_supplyCrates);
+                    tooltip = CSTRING(AreaModule_Attribute_supplyCrates_Description);
 
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(0);
@@ -69,7 +69,7 @@ class Cfg3DEN {
                     idc = 100;
                     idcSearch = 123;
 
-                    onLoad = QUOTE(_this call FUNC(attributeTwoPanelClassesLoad));
+                    onLoad = QUOTE(_this call FUNC(attributeSupplyClassesClassesLoad));
 
                     colorBackground[] = {0,0,0,0.5};
 
@@ -82,7 +82,7 @@ class Cfg3DEN {
                 class ButtonAdd: ctrlButton {
                     text = "+";
 
-                    onButtonClick = QUOTE(_this call FUNC(attributeTwoPanelAdd));
+                    onButtonClick = QUOTE(_this call FUNC(attributeSupplyClassesAdd));
 
                     x = QUOTE( (COL_W + BTN_W / 2 + BTN_W / 3 + 2.5) * ATTRIBUTE_W);
                     y = QUOTE(20 * ATTRIBUTE_H);
@@ -92,7 +92,7 @@ class Cfg3DEN {
                 class ButtonRemove: ctrlButton {
                     text = "-";
 
-                    onButtonClick = QUOTE(_this call FUNC(attributeTwoPanelRemove));
+                    onButtonClick = QUOTE(_this call FUNC(attributeSupplyClassesRemove));
 
                     x = QUOTE( (COL_W + BTN_W / 2 + BTN_W / 3 + 2.5) * ATTRIBUTE_W);
                     y = QUOTE(30 * ATTRIBUTE_H);

@@ -16,7 +16,7 @@ params ["_ctrlGrp"];
 
 TRACE_1("Save",_ctrlGrp);
 
-private _ctrlList = _ctrlGrp controlsGroupCtrl IDC_ATTRIBUTE_TWOPANEL_LIST;
+private _ctrlList = _ctrlGrp controlsGroupCtrl IDC_ATTRIBUTE_SUPPLYCLASSES_LIST;
 
 private _items = [];
 for "_i" from 0 to lbSize _ctrlList - 1 do {

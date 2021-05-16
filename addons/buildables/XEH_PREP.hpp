@@ -1,9 +1,9 @@
 PREP(areaModule);
 
 PREP(attributeLayersLoad);
-PREP(attributeTwoPanelLoad);
-PREP(attributeTwoPanelSave);
-PREP(attributeTwoPanelAdd);
-PREP(attributeTwoPanelRemove);
-PREP(attributeTwoPanelListAdd);
-PREP(attributeTwoPanelClassesLoad);
+PREP(attributeSupplyClassesLoad);
+PREP(attributeSupplyClassesSave);
+PREP(attributeSupplyClassesAdd);
+PREP(attributeSupplyClassesRemove);
+PREP(attributeSupplyClassesListAdd);
+PREP(attributeSupplyClassesClassesLoad);

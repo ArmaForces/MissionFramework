@@ -17,9 +17,8 @@ class CfgVehicles {
                 validate = "number";
                 defaultValue = "0";
             };
-            class GVAR(twoPanel): Default {
-                control = QGVAR(twoPanel);
-                displayName = "twoPanel";
+            class GVAR(supplyClasses): Default {
+                control = QGVAR(supplyClasses);
                 defaultValue = "'[]'";
                 expression = "_this setVariable ['%s', parseSimpleArray _value]";
                 validate = "none";
@@ -57,10 +56,7 @@ class CfgVehicles {
                 property = QGVAR(layer);
             };
 
-            class GVAR(supplyCrates): GVAR(twoPanel) {
-                displayName = CSTRING(AreaModule_Attribute_supplyCrates);
-                tooltip = CSTRING(AreaModule_Attribute_supplyCrates_Description);
-
+            class GVAR(supplyCrates): GVAR(supplyClasses) {
                 defaultValue = "'[""B_supplyCrate_F""]'";
 
                 property = QGVAR(supplyCrates);

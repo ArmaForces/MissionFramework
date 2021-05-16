@@ -16,7 +16,7 @@ params ['_btn'];
 
 private _ctrlGrp = ctrlParentControlsGroup _btn;
 
-private _ctrlList = _ctrlGrp controlsGroupCtrl IDC_ATTRIBUTE_TWOPANEL_LIST;
+private _ctrlList = _ctrlGrp controlsGroupCtrl IDC_ATTRIBUTE_SUPPLYCLASSES_LIST;
 
 private _selectedClass = _ctrlList lbData lbCurSel _ctrlList;
 
