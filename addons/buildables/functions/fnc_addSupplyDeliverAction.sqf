@@ -40,7 +40,7 @@ private _insertChildren = {
                 (_this select 2) params ["_area"];
 
                 !(_area get "built")
-                // && {_target inArea (_zoneHash get "suppliesArea")}
+                && {_target inArea (_area get "area")}
             },
             {},
             [_area]
