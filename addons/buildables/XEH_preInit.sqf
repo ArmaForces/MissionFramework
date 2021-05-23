@@ -70,8 +70,7 @@ if (isServer) then {
         // update area status on all clients/jip
         [QGVAR(registerArea), _area, _area get "jipId"] call CBA_fnc_globalEventJIP;
 
-        {_x hideObjectGlobal false} forEach (getMissionLayerEntities (_area get "layer") select 0);
-
+        _area call FUNC(areaBuild);
     }] call CBA_fnc_addEventHandler;
 };
 

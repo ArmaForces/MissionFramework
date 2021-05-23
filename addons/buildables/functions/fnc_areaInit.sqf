@@ -4,8 +4,13 @@
  * Inits buildable area.
  *
  * Arguments:
- * 0: Objects <ARRAY>
- * 1: All <BOOL>
+ * 0: Editor layer name <STRING>
+ * 1: Buildable area <STRING, ARRAY>
+ * 2: Area display name <STRING>
+ * 3: Amount of required supplies <NUMBER, defaults to 1>
+ * 4: How long it takes to build the area <NUMBER, defaults to 60>
+ * 5: Should layer objects be hidden <BOOL, defaults to false>
+ * 6: Class names of objects that can be used to supply the area <BOOL, defaults to false>
  *
  * Return Value:
  * Area was initialized <BOOL>

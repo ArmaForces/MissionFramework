@@ -1,4 +1,5 @@
 PREP(areaInit);
+PREP(areaBuild);
 PREP(addSupplyDeliverAction);
 
 PREP(areaModule);
