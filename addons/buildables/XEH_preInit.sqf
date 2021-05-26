@@ -25,9 +25,11 @@ if (hasInterface) then {
 
         if (_built) exitWith {
             "Built" call CBA_fnc_notify;
+            playSound "defaultNotification";
         };
 
         "Delivered" call CBA_fnc_notify;
+        playSound "defaultNotificationClose";
     }] call CBA_fnc_addEventHandler;
 };
 
