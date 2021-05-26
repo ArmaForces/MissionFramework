@@ -20,7 +20,7 @@ GVAR(areas) = createHashMap;
 if (hasInterface) then {
     GVAR(intializedClasses) = [];
 
-    [QGVAR(notify), {
+    [QGVAR(deliverNotify), {
         params ["_built"];
 
         if (_built) exitWith {
@@ -54,7 +54,8 @@ if (isServer) then {
             [QGVAR(buildArea), [AREA_ID(_area)]] call CBA_fnc_serverEvent;
         };
 
-        [QGVAR(notify), [_current >= _required], _supplier] call CBA_fnc_targetEvent;
+        [QGVAR(delivered), _area get "layer"] call CBA_fnc_globalEvent;
+        [QGVAR(deliverNotify), [_current >= _required], _supplier] call CBA_fnc_targetEvent;
 
     }] call CBA_fnc_addEventHandler;
 

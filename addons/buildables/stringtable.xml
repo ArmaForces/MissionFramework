@@ -12,9 +12,8 @@
         </Key>
         <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_Layer_Description">
             <English>Editor layer that contains objects to be built after supplies will be delivered to the module area.</English>
-            <Polish>Warstwa edytora która zostanie zbudowana po dostarczeniu skyrzni zaopatrzeniowych do obszaru modułu.</Polish>
+            <Polish>Warstwa edytora która zostanie zbudowana po dostarczeniu skrzyni zaopatrzeniowych do obszaru modułu.</Polish>
         </Key>
-
         <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_SupplyCrates">
             <English>Supply crates types</English>
             <Polish>Typy skrzynek zaopatrzeniowych</Polish>
@@ -23,22 +22,26 @@
             <English>Types of objects that will be allowed as supplies for building this area.</English>
             <Polish>Typy skrzynek zaopatrzeniowych które będą mogły byc wykorzystane do zbudowania tego obszaru.</Polish>
         </Key>
-
         <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_RequiredSupplies">
             <English>Required amount of supply crates</English>
-            <Polish>Ilość potrzebnych skrzyni zaopatrzeniowych</Polish>
+            <Polish>Ilość potrzebnych skrzyń zaopatrzeniowych</Polish>
         </Key>
-
         <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_BuildTime">
             <English>Build time (s)</English>
             <Polish>Czas budowy (s)</Polish>
         </Key>
-
+        <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_BuildTime_Description">
+            <English>How long does it take for the area to be built after delivering required amount of supplies. 0 means instant build.</English>
+            <Polish>Ile czasu potrzeba aby strefa została zbudowana po dostarczeniu wymaganej liczby zasobów. 0 oznacza natychmiastową budowę.</Polish>
+        </Key>
         <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_HideObjects">
             <English>Hide layer objects</English>
             <Polish>Ukryj obiekty warstwy</Polish>
         </Key>
-
+        <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_HideObjects_Description">
+            <English>Should layer objects be hidden during module initialization.</English>
+            <Polish>Czy obiekty z warstwy mają zostać ukryte podczas inicjalizacji modułu.</Polish>
+        </Key>
         <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_OnBuilt">
             <English>Execute On Built</English>
             <Polish>Wywołaj Po Zbudowaniu</Polish>
@@ -49,8 +52,14 @@
         </Key>
         <!-- Description -->
         <Key ID="STR_AFMF_Buildables_AreaModule_Description">
-            <English>Lorem ipsum.</English>
-            <Polish>Lorem ipsum..</Polish>
+            <English>
+                This module allows you to "build" editor layer by un-hiding the layer objects after delivering configured amount of supplies to the area.
+                Types of accepted supplies can be configured in module attributes, module area defines the delivery zone.
+            </English>
+            <Polish>
+                Ten moduł pozwala na "zbudowanie" warstwy edytora poprzez pokazanie obiektów z warstwy po tym go dostarczona zostanie skonfigurowana ilość zaopatrzenia.
+                Rodzaje akceptowanych zasobów moga być skonfigurowane w atrybutach modułu, obszar modułu określa strefę dostawy.
+            </Polish>
         </Key>
         <!-- Actions -->
         <Key ID="STR_AFMF_Buildables_Action_Deliver">
