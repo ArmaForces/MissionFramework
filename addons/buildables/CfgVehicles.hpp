@@ -9,9 +9,6 @@ class CfgVehicles {
             class Combo;
             class ModuleDescription;
 
-            class GVAR(Layers): Combo {
-                control = QGVAR(Layers);
-            };
             class GVAR(supplyClasses): Default {
                 control = QGVAR(supplyClasses);
                 defaultValue = "'[]'";
@@ -20,7 +17,7 @@ class CfgVehicles {
             };
         };
 
-        class ModuleDescription {};
+        class ModuleDescription;
     };
 
     class GVAR(areaModule): Module_F {
@@ -44,9 +41,11 @@ class CfgVehicles {
         };
 
         class Attributes: AttributesBase {
-            class GVAR(layer): GVAR(Layers) {
+            class GVAR(layer): Combo {
                 displayName = CSTRING(AreaModule_Attribute_Layer);
                 tooltip = CSTRING(AreaModule_Attribute_Layer_Description);
+
+                control = QGVAR(Layers);
 
                 property = QGVAR(layer);
             };
@@ -86,8 +85,6 @@ class CfgVehicles {
                 defaultValue = "true";
             };
 
-            class ModuleDescription: ModuleDescription {};
-
             class GVAR(onBuilt): Default {
                 displayName = CSTRING(AreaModule_Attribute_OnBuilt);
                 tooltip = CSTRING(AreaModule_Attribute_OnBuilt_Description);
@@ -99,12 +96,14 @@ class CfgVehicles {
 
                 defaultValue = "''";
             };
+
+            class ModuleDescription: ModuleDescription {};
         };
 
         class ModuleDescription: ModuleDescription {
-            description[] = {
-                CSTRING(AreaModule_Description)
-            };
+            description = CSTRING(AreaModule_Description);
+            direction = 1;
+            position = 1;
         };
     };
 };
