@@ -38,6 +38,15 @@
             <English>Hide layer objects</English>
             <Polish>Ukryj obiekty warstwy</Polish>
         </Key>
+
+        <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_OnBuilt">
+            <English>Execute On Built</English>
+            <Polish>Wywołaj Po Zbudowaniu</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Buildables_AreaModule_Attribute_OnBuilt_Description">
+            <English>Code to execute after area finishes building. (executed server-side)</English>
+            <Polish>Kod do wywołania który zostanie uruchomiony gdy obszar skończy się budować. (wywoływany na serwerze)</Polish>
+        </Key>
         <!-- Description -->
         <Key ID="STR_AFMF_Buildables_AreaModule_Description">
             <English>Lorem ipsum.</English>

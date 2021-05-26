@@ -26,12 +26,14 @@ if (_buildTime < 1) exitWith {
 private _delay = _buildTime / count _objects;
 
 private _fnc_build = {
-    params ["_fnc_build", "_delay", "_objects"];
-    if (_objects isEqualTo []) exitWith {};
+    params ["_fnc_build", "_delay", "_objects", "_area"];
+    if (_objects isEqualTo []) exitWith {
+        [QGVAR(built), _area get "layer"] call CBA_fnc_globalEvent;
+    };
 
     (_objects deleteAt 0) hideObjectGlobal false;
 
     [_fnc_build, _this, _delay] call CBA_fnc_waitAndExecute;
 };
 
-[_fnc_build, _delay, _objects] call _fnc_build;
+[_fnc_build, _delay, _objects, _area] call _fnc_build;

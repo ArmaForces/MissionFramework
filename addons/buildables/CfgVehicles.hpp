@@ -12,11 +12,6 @@ class CfgVehicles {
             class GVAR(Layers): Combo {
                 control = QGVAR(Layers);
             };
-            class GVAR(Number): Edit {
-                // control = QGVAR(Number);
-                validate = "number";
-                defaultValue = "0";
-            };
             class GVAR(supplyClasses): Default {
                 control = QGVAR(supplyClasses);
                 defaultValue = "'[]'";
@@ -92,6 +87,18 @@ class CfgVehicles {
             };
 
             class ModuleDescription: ModuleDescription {};
+
+            class GVAR(onBuilt): Default {
+                displayName = CSTRING(AreaModule_Attribute_OnBuilt);
+                tooltip = CSTRING(AreaModule_Attribute_OnBuilt_Description);
+
+                property = QGVAR(onBuilt);
+
+                control = "EditCodeMulti5";
+                validate = "expression";
+
+                defaultValue = "''";
+            };
         };
 
         class ModuleDescription: ModuleDescription {
