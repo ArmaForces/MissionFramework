@@ -54,7 +54,7 @@ private _insertChildren = {
 
 private _rootAction = [
     QGVAR(build),
-    "Build",
+    LLSTRING(Action_Deliver),
     "\a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa",
     {},
     {true},

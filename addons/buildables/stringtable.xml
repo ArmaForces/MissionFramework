@@ -43,5 +43,10 @@
             <English>Lorem ipsum.</English>
             <Polish>Lorem ipsum..</Polish>
         </Key>
+        <!-- Actions -->
+        <Key ID="STR_AFMF_Buildables_Action_Deliver">
+            <English>Deliver</English>
+            <Polish>Dostarcz</Polish>
+        </Key>
     </Package>
 </Project>
