@@ -21,6 +21,8 @@ private _buildTime = _area get "buildTime";
 
 if (_buildTime < 1) exitWith {
     {_x hideObjectGlobal false} forEach _objects;
+
+    [QGVAR(built), _area get "layer"] call CBA_fnc_globalEvent;
 };
 
 private _delay = _buildTime / count _objects;
