@@ -7,7 +7,7 @@
  * 0: Eden attribute control group <CONTROL>
  *
  * Return Value:
- * None
+ * Stringified array of selected classes <STRING>
  *
  * Public: No
  */
