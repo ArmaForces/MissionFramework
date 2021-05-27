@@ -11,3 +11,5 @@ PREP(attributeSupplyClassesAdd);
 PREP(attributeSupplyClassesRemove);
 PREP(attributeSupplyClassesListAdd);
 PREP(attributeSupplyClassesClassesLoad);
+
+PREP(3denValidate);

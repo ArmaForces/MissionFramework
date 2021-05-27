@@ -18,6 +18,7 @@ class CfgVehicles {
         };
 
         class ModuleDescription;
+        class EventHandlers;
     };
 
     class GVAR(areaModule): Module_F {
@@ -34,6 +35,12 @@ class CfgVehicles {
         canSetArea = 1;
         canSetAreaHeight = 1;
         canSetAreaShape = 1;
+
+        class EventHandlers: EventHandlers {
+            class ADDON {
+                attributesChanged3DEN = QUOTE(call FUNC(3denValidate));
+            };
+        };
 
         class AttributeValues {
             size3[] = {25, 25, 15};
