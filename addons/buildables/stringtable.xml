@@ -52,14 +52,17 @@
         </Key>
         <!-- Description -->
         <Key ID="STR_AFMF_Buildables_AreaModule_Description">
-            <English>
-                This module allows you to "build" editor layer by un-hiding the layer objects after delivering configured amount of supplies to the area.
-                Types of accepted supplies can be configured in module attributes, module area defines the delivery zone.
-            </English>
-            <Polish>
-                Ten moduł pozwala na "zbudowanie" warstwy edytora poprzez pokazanie obiektów z warstwy po tym go dostarczona zostanie skonfigurowana ilość zaopatrzenia.
-                Rodzaje akceptowanych zasobów moga być skonfigurowane w atrybutach modułu, obszar modułu określa strefę dostawy.
-            </Polish>
+            <English>This module allows you to "build" editor layer by un-hiding the layer objects after delivering configured amount of supplies to the area.&lt;br/&gt;Types of accepted supplies can be configured in module attributes, module area defines the delivery zone.</English>
+            <Polish>Ten moduł pozwala na "zbudowanie" warstwy edytora poprzez pokazanie obiektów z warstwy po tym go dostarczona zostanie skonfigurowana ilość zaopatrzenia.&lt;br/&gt;Rodzaje akceptowanych zasobów moga być skonfigurowane w atrybutach modułu, obszar modułu określa strefę dostawy.</Polish>
+        </Key>
+        <!-- 3DEN -->
+        <Key ID="STR_AFMF_Buildables_3DEN_Error_Layer">
+            <English>Editor layer not set!</English>
+            <Polish>Nie ustawiono warstwy edytora!</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Buildables_3DEN_Duplicate_Layer">
+            <English>Selected layer is already used in another module (%1).&lt;br/&gt;Every module must have unique layer assigned!</English>
+            <Polish>Wybrana warstwa edytora jest już używana w innym module (%1).&lt;br/&gt;Każdy moduł musi używać unikatowej warstwy!</Polish>
         </Key>
         <!-- Actions -->
         <Key ID="STR_AFMF_Buildables_Action_Deliver">

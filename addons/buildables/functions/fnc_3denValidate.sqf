@@ -17,7 +17,7 @@ params ["_logic"];
 private _logicLayer = _logic get3DENAttribute QGVAR(layer) select 0;
 
 if (_logicLayer == "") exitWith {
-    ["Editor layer not set!", 1, 5] call BIS_fnc_3DENNotification;
+    [LLSTRING(3DEN_Error_Layer), 1, 5] call BIS_fnc_3DENNotification;
 };
 
 private _modules = allMissionObjects QGVAR(areaModule) - [_logic];
@@ -29,8 +29,8 @@ if (_duplicateIdx != -1) exitWith {
     _duplicateName = [_duplicateName, str _duplicate] select (_duplicateName == "");
 
     [
-        format ["Selected layer is already used in another module (%1).<br/>Every module must have unique layer assigned!", _duplicateName],
-        "Warning",
+        format [LLSTRING(3DEN_Duplicate_Layer), _duplicateName],
+        localize "STR_MIS_STATE_ERROR",
         [
             "OK",
             {
