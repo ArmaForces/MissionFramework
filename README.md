@@ -16,7 +16,7 @@
 
 **ArmaForces - Mission Framework** is a collaborative effort of ArmaForces members (started by Madin) to enhance Arma 3 mission making process through adding modules for easier AI spawning and caching during missions.
 
-The mod is on the same foundation as the ACE3 mod, using its framework, systems, tools and standards. It is entirely **open-source** and licensed under the GNU General Public License ([GPLv2](https://github.com/ArmaForces/MadinAI/blob/master/LICENSE)).
+The mod is on the same foundation as the ACE3 mod, using its framework, systems, tools and standards. It is entirely **open-source** and licensed under the GNU General Public License ([GPLv2](https://github.com/ArmaForces/MissionFramework/blob/master/LICENSE)).
 
 Huge appreciation and thanks to [ACE3 Team](http://ace3mod.com/team.html) for their open-source nature and permission to use their systems.
 
