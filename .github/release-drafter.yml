@@ -21,7 +21,7 @@ exclude-labels:
 
 change-template: '- $TITLE (#$NUMBER)'
 template: |
-  _MadinAI release._
+  _ArmaForces MissionFramework release._
 
   ## Change Log Summary
 
