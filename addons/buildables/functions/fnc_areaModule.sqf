@@ -48,3 +48,5 @@ if (GET_ATTR(onBuilt) != '') then {
     GET_ATTR(hideObjects),
     GET_ATTR(supplyCrates)
 ] call FUNC(areaInit);
+
+nil

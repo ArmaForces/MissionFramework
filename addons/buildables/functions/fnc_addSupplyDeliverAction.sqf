@@ -60,6 +60,7 @@ private _rootAction = [
     {true},
     _insertChildren
 ] call ace_interact_menu_fnc_createAction;
+
 [_class, 0, ["ACE_MainActions"], _rootAction] call ace_interact_menu_fnc_addActionToClass;
 
 nil

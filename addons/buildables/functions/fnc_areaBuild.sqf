@@ -29,11 +29,11 @@ private _delay = _buildTime / count _objects;
 
 private _fnc_build = {
     params ["_fnc_build", "_delay", "_objects", "_area"];
+    ([_objects deleteAt 0] param [0, objNull]) hideObjectGlobal false;
+    
     if (_objects isEqualTo []) exitWith {
         [QGVAR(built), _area get "layer"] call CBA_fnc_globalEvent;
     };
-
-    (_objects deleteAt 0) hideObjectGlobal false;
 
     [_fnc_build, _this, _delay] call CBA_fnc_waitAndExecute;
 };
