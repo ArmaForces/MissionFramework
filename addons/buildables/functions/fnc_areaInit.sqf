@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Editor layer name <STRING>
- * 1: Buildable area <STRING, ARRAY>
+ * 1: Supplies delivery area, marker name or area array <STRING, ARRAY>
  * 2: Area display name <STRING>
  * 3: Amount of required supplies <NUMBER, defaults to 1>
  * 4: How long it takes to build the area <NUMBER, defaults to 60>
@@ -25,7 +25,7 @@ if (!isServer) exitWith {false};
 
 params [
     ["_layer", "", [""]],
-    ["_area", "", ["", []]],
+    ["_deliveryArea", "", ["", []]],
     ["_displayName", "", [""]],
     ["_requiredSupplies", 1, [0]],
     ["_buildTime", 60, [0]],
@@ -51,7 +51,7 @@ if (_hideObjects) then {
 
 private _areaHash = createHashMapFromArray [
     ["layer", _layer],
-    ["area", _area],
+    ["area", _deliveryArea],
     ["displayName", _displayName],
     ["requiredSupplies", _requiredSupplies max 1],
     ["currentSupplies", 0],
