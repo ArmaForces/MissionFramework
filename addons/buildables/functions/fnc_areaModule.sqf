@@ -22,7 +22,7 @@ params [
     ["_logic", objNull, [objNull]]
 ];
 
-private _area = [getPosASL _logic];
+private _area = [ASLToAGL getPosASL _logic];
 _area append (_logic getVariable ["objectarea", []]);
 _logic setVariable [QGVAR(area), _area, true];
 
