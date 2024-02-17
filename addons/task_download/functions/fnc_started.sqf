@@ -17,7 +17,7 @@
 
 params ["_object"];
 
-private _actionPath = _object getVariable [QGVAR(actionPath), []];
+private _actionPath = _object getVariable [QGVAR(downloadActionPath), []];
 
 if (_actionPath isEqualTo []) exitWith {
     WARNING_1("Could not remove action from object %1",_object)

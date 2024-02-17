@@ -34,30 +34,6 @@ _object setVariable [QGVAR(downloadTime), _downloadTime];
 _object setVariable [QGVAR(startCondition), _startCondition];
 _object setVariable [QGVAR(startFailedMessage), _startFailedMessage];
 
-private _showCondition = {
-    params ["_object"];
-    !(_object getVariable [QGVAR(downloadStarted), false])
-};
-
-private _action = [
-    QGVAR(startDownloadAction),
-    LLSTRING(StartAction),
-    "",
-    {
-        params ["_object"];
-        [QGVAR(start), [_object, player]] call CBA_fnc_serverEvent;
-    },
-    _showCondition,
-    {}, [_object], "", 4, [false, false, false, false, false], {}
-] call ace_interact_menu_fnc_createAction;
-
-private _actionPath = [
-    _object,
-    ACTION_TYPE,
-    ["ACE_MainActions"],
-    _action
-] call ACEFUNC(interact_menu,addActionToObject);
-
-_object setVariable [QGVAR(actionPath), _actionPath];
+[_object] call FUNC(initDownloadAction);
 
 true

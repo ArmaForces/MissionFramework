@@ -24,17 +24,17 @@ if (!hasInterface) exitWith {};
 
 private _statement = {
     params ["_object"];
-    [QGVAR(start), [_object, player]] call CBA_fnc_serverEvent;
+    [QGVAR(checkProgress), [_object, player]] call CBA_fnc_serverEvent;
 };
 
 private _showCondition = {
     params ["_object"];
-    !(_object getVariable [QGVAR(downloadStarted), false])
+    _object getVariable [QGVAR(downloadStarted), false]
 };
 
 private _action = [
-    QGVAR(startDownloadAction),
-    LLSTRING(StartAction),
+    QGVAR(checkProgressAction),
+    LLSTRING(CheckProgressAction),
     "",
     _statement,
     _showCondition,
@@ -48,6 +48,6 @@ private _actionPath = [
     _action
 ] call ACEFUNC(interact_menu,addActionToObject);
 
-_object setVariable [QGVAR(downloadActionPath), _actionPath];
+_object setVariable [QGVAR(checkProgressActionPath), _actionPath];
 
 nil

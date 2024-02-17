@@ -1,4 +1,8 @@
+PREP(calculateEstimatedTimeRemaining);
 PREP(canContinue);
+PREP(checkProgress);
+PREP(formatProgress);
+PREP(initCheckProgressAction);
 PREP(initDownloadAction);
 PREP(loop);
 PREP(setup);

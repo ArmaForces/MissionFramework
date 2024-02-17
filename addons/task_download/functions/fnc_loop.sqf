@@ -38,12 +38,15 @@ if (_newTotalProgress > MAX_PROGRESS) then {
 };
 
 if (_newTotalProgress isEqualTo MAX_PROGRESS && {_previousTickProgress isEqualTo -1}) exitWith {
+    _object setVariable [QGVAR(completed), true, true];
     [QGVAR(successful), [_object]] call CBA_fnc_globalEvent;
 };
 
-// TODO: Possible future enhancement. Consider action to check progress instead of notifying everyone.
-// Probably also include estimated completion time then.
-private _progressText = format ["%1%2", floor(_newTotalProgress * 100)/100 toFixed 2, "%"];
-[QGVAR(progress), [_object, _progressText]] call CBA_fnc_globalEvent;
+if (GVAR(showProgressToAll)) then {
+    private _progressText = [_newTotalProgress] call FUNC(formatProgress);
+    [QGVAR(showProgress), [_object, _progressText]] call CBA_fnc_globalEvent;
+} else {
+    _object setVariable [QGVAR(progress), _newTotalProgress];
+};
 
 [FUNC(loop), [_object, _progressPerTick, _tickProgress, _newTotalProgress], PROGRESS_INTERVAL] call CBA_fnc_waitAndExecute;

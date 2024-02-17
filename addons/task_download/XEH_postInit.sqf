@@ -2,14 +2,11 @@
 
 if (isServer) then {
     [QGVAR(start), FUNC(start)] call CBA_fnc_addEventHandler;
+
+    [QGVAR(checkProgress), FUNC(checkProgress)] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {
-    [QGVAR(progress), {
-        params ["_object", "_progress"];
-        systemChat format [LLSTRING(StatusReport), _progress];
-    }] call CBA_fnc_addEventHandler;
-
     [QGVAR(failed), {
         systemChat LLSTRING(Failed);
     }] call CBA_fnc_addEventHandler;
@@ -29,4 +26,16 @@ if (hasInterface) then {
         params ["_msg"];
         systemChat (_msg call BIS_fnc_localize);
     }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(showProgress), {
+        params ["_object", "_progress", "_estimatedTimeLeft"];
+        systemChat format [LLSTRING(StatusReport), _progress, _estimatedTimeLeft];
+    }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(showProgressCompleted), {
+        params ["_object"];
+        systemChat LLSTRING(Finished);
+    }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(initCheckProgressAction), FUNC(initCheckProgressAction)] call CBA_fnc_addEventHandler;
 };
