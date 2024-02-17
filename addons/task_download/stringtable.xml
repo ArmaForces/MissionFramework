@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFMF">
+    <Package name="Task_Download">
+        <Key ID="STR_AFMF_Task_Download_DisplayName">
+            <English>Task Download</English>
+            <Polish>Zadane pobierania</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Task_Download_StartAction">
+            <English>Start download</English>
+            <Polish>Rozpocznij pobieranie</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Task_Download_StartActionFailed">
+            <English>Could not start the download</English>
+            <Polish>Pobieranie nie mogło zostać rozpoczęte</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Task_Download_Started">
+            <English>Started download, total estimated time: %1</English>
+            <Polish>Rozpoczęto pobieranie, szacowany pozostały czas: %1</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Task_Download_StatusReport">
+            <English>Downloading data: %1</English>
+            <Polish>Pobieranie danych: %1</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Task_Download_Finished">
+            <English>Finished downloading data</English>
+            <Polish>Zakończono pobieranie danych</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Task_Download_Failed">
+            <English>Failed downloading data. Remote host lost.</English>
+            <Polish>Pobieranie danych nieudane. Utracono połączenie z hostem.</Polish>
+        </Key>
+    </Package>
+</Project>
