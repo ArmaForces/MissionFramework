@@ -7,7 +7,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "afmf_main"
+            "afmf_main",
+            "ace_interact_menu"
         };
         author = "ArmaForces";
         authors[] = {"3Mydlo3"};
