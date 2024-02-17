@@ -4,13 +4,13 @@
  * Removes download action from object.
  *
  * Arguments:
- * 0:
+ * 0: Object which is used for the download <OBJECT>
  *
  * Return Value:
- *
+ * None
  *
  * Example:
- *
+ * None
  *
  * Public: No
  */
@@ -24,3 +24,5 @@ if (_actionPath isEqualTo []) exitWith {
 };
 
 [_object, ACTION_TYPE, _actionPath] call ACEFUNC(interact_menu,removeActionFromObject);
+
+nil
