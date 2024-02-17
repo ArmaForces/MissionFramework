@@ -1,10 +1,12 @@
 # Build output
-addons/*.pbo
+/.hemttout/
 
 # Releases
-releases/*
+/releases/
+
 hemtt
 hemtt.exe
+.hemtt/local
 symbols/*
 
 # Bikey
