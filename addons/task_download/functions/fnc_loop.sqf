@@ -39,12 +39,16 @@ if (_newTotalProgress > MAX_PROGRESS) then {
 
 if (_newTotalProgress isEqualTo MAX_PROGRESS && {_previousTickProgress isEqualTo -1}) exitWith {
     _object setVariable [QGVAR(completed), true, true];
-    [QGVAR(successful), [_object]] call CBA_fnc_globalEvent;
+    if (GVAR(automaticCompletion)) then {
+        [QGVAR(successful), [_object]] call CBA_fnc_globalEvent;
+    };
 };
 
 if (GVAR(showProgressToAll)) then {
+    private _totalTime = _object getVariable [QGVAR(downloadTime), 0];
+    private _estimatedTimeLeft = [_totalTime, _newTotalProgress] call FUNC(calculateEstimatedTimeRemaining);
     private _progressText = [_newTotalProgress] call FUNC(formatProgress);
-    [QGVAR(showProgress), [_object, _progressText]] call CBA_fnc_globalEvent;
+    [QGVAR(showProgress), [_object, _progressText, _estimatedTimeLeft]] call CBA_fnc_globalEvent;
 } else {
     _object setVariable [QGVAR(progress), _newTotalProgress];
 };

@@ -11,10 +11,6 @@ if (hasInterface) then {
         systemChat LLSTRING(Failed);
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(successful), {
-        systemChat LLSTRING(Finished);
-    }] call CBA_fnc_addEventHandler;
-
     [QGVAR(started), FUNC(started)] call CBA_fnc_addEventHandler;
 
     [QGVAR(startSuccessful), {

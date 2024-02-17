@@ -21,6 +21,14 @@ params ["_object", "_player"];
 private _isCompleted = _object getVariable [QGVAR(completed), false];
 if (_isCompleted) exitWith {
     [QGVAR(showProgressCompleted), [_object], _player] call CBA_fnc_targetEvent;
+
+    if (GVAR(automaticCompletion)) exitWith {};
+
+    private _confirmedCompletionEarlier = _object getVariable [QGVAR(completedConfirmed), false];
+    if (_confirmedCompletionEarlier) exitWith {};
+    _object setVariable [QGVAR(completedConfirmed), true, true];
+
+    [QGVAR(successful), [_object]] call CBA_fnc_globalEvent;
 };
 
 private _currentProgress = _object getVariable [QGVAR(progress), INITIAL_PROGRESS];

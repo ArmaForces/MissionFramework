@@ -4,7 +4,8 @@
  * Function checks if download from given object can continue.
  *
  * Arguments:
- * 0: Object which is used for download <OBJECT>
+ * 0: Total expected time of the download <OBJECT>
+ * 1: Current download progress <NUMBER> (Optional, default 0)
  *
  * Return Value:
  * True if download can continue <STRING>
@@ -27,6 +28,7 @@ _timeLeftArray params ["_hours", "_minutes", "_seconds"];
 private _expectedRemainingTimeText = if (_hours isEqualTo "00") then {
     if (_minutes isEqualTo "00") then {
         private _value = [_seconds, "0"] call CBA_fnc_leftTrim;
+        if (_value isEqualTo "") then { _value = "0" };
         format ["%1 s", _value]
     } else {
         private _value = [_minutes, "0"] call CBA_fnc_leftTrim;
