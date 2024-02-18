@@ -1,10 +1,13 @@
 PREP(calculateEstimatedTimeRemaining);
 PREP(canContinue);
 PREP(checkProgress);
+PREP(displayProgressOnScreen);
 PREP(formatProgress);
 PREP(initCheckProgressAction);
 PREP(initDownloadAction);
 PREP(loop);
+PREP(prepareDisplay);
+PREP(randomDateTime);
 PREP(setup);
 PREP(start);
 PREP(started);

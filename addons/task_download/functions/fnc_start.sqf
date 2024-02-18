@@ -27,6 +27,7 @@ if (!_canStart) exitWith {
     [QGVAR(startFailed), [_msg], _player] call CBA_fnc_targetEvent;
 };
 
+_object setVariable [QGVAR(downloadIntel_active), true];
 _object setVariable [QGVAR(downloadStarted), true, true];
 
 private _totalExpectedTime = _object getVariable [QGVAR(downloadTime), 0];

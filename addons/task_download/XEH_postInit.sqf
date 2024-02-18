@@ -4,6 +4,10 @@ if (isServer) then {
     [QGVAR(start), FUNC(start)] call CBA_fnc_addEventHandler;
 
     [QGVAR(checkProgress), FUNC(checkProgress)] call CBA_fnc_addEventHandler;
+
+    [QGVAR(successful), {
+        ["ocap_customEvent", ["generalEvent", "Intel was downloaded!"]] call CBA_fnc_serverEvent;
+    }] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {

@@ -11,4 +11,8 @@ GVAR(automaticCompletion) = false;
 // Show progress to everyone. If false, show progress action must be used.
 GVAR(showProgressToAll) = false;
 
+// Display progress bar on device screen (if possible). Changing it after setup won't work correctly.
+GVAR(displayProgressOnScreen) = true;
+GVAR(displayProgressOnScreenRefreshInterval) = 1;
+
 ADDON = true;

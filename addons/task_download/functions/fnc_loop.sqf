@@ -44,13 +44,13 @@ if (_newTotalProgress isEqualTo MAX_PROGRESS && {_previousTickProgress isEqualTo
     };
 };
 
+_object setVariable [QGVAR(progress), _newTotalProgress];
+
 if (GVAR(showProgressToAll)) then {
     private _totalTime = _object getVariable [QGVAR(downloadTime), 0];
     private _estimatedTimeLeft = [_totalTime, _newTotalProgress] call FUNC(calculateEstimatedTimeRemaining);
     private _progressText = [_newTotalProgress] call FUNC(formatProgress);
     [QGVAR(showProgress), [_object, _progressText, _estimatedTimeLeft]] call CBA_fnc_globalEvent;
-} else {
-    _object setVariable [QGVAR(progress), _newTotalProgress];
 };
 
 [FUNC(loop), [_object, _progressPerTick, _tickProgress, _newTotalProgress], PROGRESS_INTERVAL] call CBA_fnc_waitAndExecute;

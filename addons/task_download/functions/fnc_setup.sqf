@@ -21,6 +21,7 @@
 params [
     "_object",
     "_downloadTime",
+    ["_downloadSize", 2137],
     ["_startCondition", FUNC(canContinue)],
     ["_startFailedMessage", LSTRING(StartActionFailed)]
 ];
@@ -34,6 +35,19 @@ _object setVariable [QGVAR(downloadTime), _downloadTime];
 _object setVariable [QGVAR(startCondition), _startCondition];
 _object setVariable [QGVAR(startFailedMessage), _startFailedMessage];
 
+// For display progress on screen
+if (isServer) then {
+    _object setVariable [QGVAR(lastLoginDate), call FUNC(randomDateTime), true];
+    _object setVariable [QGVAR(downloadIntel_active), false, true];
+    _object setVariable [QGVAR(downloadIntel_stage), -1];
+    _object setVariable [QGVAR(downloadIntel_prepareStage), 0];
+
+    if (GVAR(displayProgressOnScreen)) then {
+        [_object, 0, _downloadSize, _downloadTime] call FUNC(prepareDisplay);
+    };
+};
+
+// Create action
 [_object] call FUNC(initDownloadAction);
 
 true
