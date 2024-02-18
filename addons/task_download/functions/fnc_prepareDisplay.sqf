@@ -70,7 +70,9 @@ private _terminalPrepare = [
         "",
         "     Preparing...",
         "",
-        "" // replaced with next
+        "", // replaced with progress bar
+        "",
+        "" // replaced with estimated remaining time
     ]
 ];
 

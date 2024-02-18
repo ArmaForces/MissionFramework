@@ -72,7 +72,13 @@ for "_i" from 1 to _progressBarStages do {
 };
 
 private _progressString = format ["     %1GB / %2GB  %3 (%4)\n", _downloaded, _fileSize, _progressBar, [_progress] call FUNC(formatProgress)];
-_terminal set [-1, _progressString];
+_terminal set [-3, _progressString];
+
+private _totalTime = _object getVariable [QGVAR(downloadTime), 0];
+private _estimatedTimeLeft = [_totalTime, _progress] call FUNC(calculateEstimatedTimeRemaining);
+private _estimatedTimeLeftText = format ["     Estimated time left: %1", _estimatedTimeLeft];
+_terminal set [-1, _estimatedTimeLeftText];
+
 _texture = format ['#(rgb,512,512,3)text(0,0,"EtelkaMonospacePro",0.03,"#1A1818","#00B200","%1")', _terminal joinString "\n"];
 _object setObjectTextureGlobal [_textureSource, _texture];
 _object setVariable [QGVAR(downloadIntel_stage), _stage + 1];

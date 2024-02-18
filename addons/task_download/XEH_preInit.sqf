@@ -13,6 +13,6 @@ GVAR(showProgressToAll) = false;
 
 // Display progress bar on device screen (if possible). Changing it after setup won't work correctly.
 GVAR(displayProgressOnScreen) = true;
-GVAR(displayProgressOnScreenRefreshInterval) = 1;
+GVAR(displayProgressOnScreenRefreshInterval) = PROGRESS_INTERVAL;
 
 ADDON = true;
