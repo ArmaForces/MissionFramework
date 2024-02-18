@@ -3,7 +3,7 @@
     <Package name="Task_Download">
         <Key ID="STR_AFMF_Task_Download_DisplayName">
             <English>Task Download</English>
-            <Polish>Zadane pobierania</Polish>
+            <Polish>Zadanie pobierania</Polish>
         </Key>
         <Key ID="STR_AFMF_Task_Download_CheckProgressAction">
             <English>Check download progress</English>
