@@ -42,7 +42,7 @@ private _action = [
     {}, [_object], "", 4, [false, false, false, false, false], {}
 ] call ACEFUNC(interact_menu,createAction);
 
-private _actionPath = [
+[
     _object,
     ACTION_TYPE,
     ["ACE_MainActions"],

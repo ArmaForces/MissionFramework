@@ -1,6 +1,6 @@
-PREP(calculateEstimatedTimeRemaining);
 PREP(canContinue);
 PREP(displayProgressOnScreen);
+PREP(formatEstimatedTimeRemaining);
 PREP(formatProgress);
 PREP(initDownloadAction);
 PREP(initGetPendriveAction);
@@ -8,4 +8,3 @@ PREP(prepareDisplay);
 PREP(randomDateTime);
 PREP(setupSimple);
 PREP(start);
-PREP(started);

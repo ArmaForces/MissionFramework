@@ -80,7 +80,7 @@ private _totalDownloadTime = _object getVariable [QGVAR(downloadTime), 0];
 private _timeText = if (_currentProgress isEqualTo MAX_PROGRESS) then {
     format ["     Download completed in: %1", [_totalDownloadTime] call CBA_fnc_formatElapsedTime]
 } else {
-    private _estimatedTimeLeft = [_totalDownloadTime, _currentProgress] call FUNC(calculateEstimatedTimeRemaining);
+    private _estimatedTimeLeft = [_totalDownloadTime, _currentProgress] call FUNC(formatEstimatedTimeRemaining);
     format ["     Estimated time left: %1", _estimatedTimeLeft]
 };
 

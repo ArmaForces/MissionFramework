@@ -10,6 +10,7 @@ class CfgPatches {
             "afmf_main",
             "ace_interact_menu"
         };
+        skipWhenMissingDependencies = 1;
         author = "ArmaForces";
         authors[] = {"3Mydlo3"};
         VERSION_CONFIG;

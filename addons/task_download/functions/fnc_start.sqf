@@ -40,6 +40,7 @@ _object setVariable [QGVAR(downloadStartTime), _downloadStartTime, true];
 [{!([_this select 0] call FUNC(canContinue))}, {
     // Download interrupted
     params ["_object"];
+    _object setVariable [QGVAR(downloadInProgress), false, true];
     [QGVAR(failed)] call CBA_fnc_globalEvent;
 }, [_object], _timeToDownloadEnd, {
     // Download finished

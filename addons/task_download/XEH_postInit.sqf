@@ -20,8 +20,6 @@ if (hasInterface) then {
         systemChat LLSTRING(Failed);
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(started), FUNC(started)] call CBA_fnc_addEventHandler;
-
     [QGVAR(startFailed), {
         params ["_msg"];
         systemChat (_msg call BIS_fnc_localize);
