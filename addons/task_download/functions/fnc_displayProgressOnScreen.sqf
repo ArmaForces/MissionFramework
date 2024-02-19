@@ -102,7 +102,7 @@ if (_currentProgress isEqualTo MAX_PROGRESS) exitWith {
     _texture = format ['#(rgb,512,512,3)text(0,0,"EtelkaMonospacePro",0.03,"#1A1818","#00B200","%1")', _terminal joinString "\n"];
     _object setObjectTexture [_textureSelection, _texture];
 
-    [{(_this select 0) getVariable [QGVAR(deviceUnplugged), false]}, {
+    [{(_this select 0) getVariable [QGVAR(deviceUnplugged), true]}, {
         params ["_object", "_terminal", "_textureSelection"];
 
         private _terminalDeviceUnplugged = [

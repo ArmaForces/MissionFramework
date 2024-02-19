@@ -24,6 +24,8 @@ params [
     "_downloadSize"
 ];
 
+TRACE_3("Setup simple download",_object,_downloadTime,_downloadSize);
+
 if (isNil "_downloadTime" || isNil "_downloadSize") exitWith { false };
 if (!([_object] call FUNC(canContinue))) exitWith { false };
 
@@ -35,6 +37,7 @@ if (isServer) then {
     _object setVariable [QGVAR(downloadStarted), false, true];
     _object setVariable [QGVAR(downloadInProgress), false, true];
     _object setVariable [QGVAR(downloadFinished), false, true];
+    _object setVariable [QGVAR(deviceUnplugged), false, true];
 
     private _progressPerTick = MAX_PROGRESS / (_downloadTime / PROGRESS_INTERVAL);
     _object setVariable [QGVAR(downloadProgressPerTick), _progressPerTick, true];

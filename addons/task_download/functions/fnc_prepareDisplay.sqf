@@ -26,6 +26,7 @@
 
 params ["_object", "_textureSelection", "_fileSize", "_downloadTime"];
 
+TRACE_4("Prepare display",_object,_textureSelection,_fileSize,_downloadTime);
 
 private _terminalLogin = " balls login:";
 private _terminalPrepare = [
