@@ -6,19 +6,17 @@ A simple script that tracks "download" of some data and publishes event on succe
 
 ```SQF
 private _downloadTime = 900;
-private _result = [laptop, _downloadTime] call afmf_task_download_fnc_setup;
+private _downloadSize = 3.42
+private _result = [laptop, _downloadTime, _downloadSize] call afmf_task_download_fnc_setup;
 ```
 
 ## Settings
 
-For now there are no CBA Settings, but you can easily change them via variables below if you'd like a different behaviour.
+For now there are no CBA Settings, but you can easily change some things via variables below if you'd like a different behaviour.
 
 ```SQF
-// Complete download automatically. If false, someone needs to check status of the download when it's completed for success to trigger.
-afmf_task_download_automaticCompletion = false;
-
-// Show progress to everyone. If false, show progress action must be used to see progress and estimated time.
-afmf_task_download_showProgressToAll = false;
+// Display refresh interval. Changing it after setup won't work correctly.
+afmf_task_download_displayProgressOnScreenRefreshInterval = 1;
 ```
 
 _Note that this might be changed at some point to proper CBA Settings._
@@ -40,3 +38,5 @@ _Server side events:_
 ## Authors
 
 - [3Mydlo3](http://github.com/3Mydlo3)
+- [Mike](https://github.com/Mike-MF)
+- [Jonpas](https://github.com/jonpas)
