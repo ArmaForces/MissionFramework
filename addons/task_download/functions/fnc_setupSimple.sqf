@@ -29,7 +29,7 @@ if (!([_object] call FUNC(canContinue))) exitWith { false };
 
 if (isServer) then {
     _object setVariable [QGVAR(initialized), true, true];
-    _object setVariable [QGVAR(downloadTime), _downloadTime];
+    _object setVariable [QGVAR(downloadTime), _downloadTime, true];
 
     // For display progress on screen
     _object setVariable [QGVAR(downloadStarted), false, true];
