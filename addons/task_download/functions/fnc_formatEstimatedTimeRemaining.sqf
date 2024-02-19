@@ -1,17 +1,17 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Function checks if download from given object can continue.
+ * Formats remaining estimated time as a formatted string.
  *
  * Arguments:
  * 0: Total expected time of the download <OBJECT>
  * 1: Current download progress <NUMBER> (Optional, default 0)
  *
  * Return Value:
- * True if download can continue <STRING>
+ * Formatted time <STRING>
  *
  * Example:
- * [laptop] call afmf_task_download_fnc_canContinue
+ * [60, 50] call afmf_task_download_fnc_formatEstimatedTimeRemaining
  *
  * Public: No
  */

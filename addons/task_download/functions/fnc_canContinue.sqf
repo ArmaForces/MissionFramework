@@ -15,10 +15,6 @@
  * Public: No
  */
 
-params ["_object"];
+params [["_object", objNull]];
 
-if (isNil "_object") exitWith { false };
-if (isNull _object) exitWith { false };
-if (!alive _object) exitWith { false };
-
-true
+alive _object // return
