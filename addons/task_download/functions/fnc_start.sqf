@@ -30,8 +30,8 @@ if (!_canStart) exitWith {
 };
 
 private _totalDownloadTime = _object getVariable [QGVAR(downloadTime), 0];
-private _downloadStartTime = CBA_missionTime + PREPARATION_INTERVAL * PREPARATION_STAGES;
-private _timeToDownloadEnd = _downloadStartTime + _totalDownloadTime;
+private _downloadStartTime = CBA_missionTime + PREPARATION_DURATION;
+private _timeToDownloadEnd = _totalDownloadTime + PREPARATION_DURATION;
 
 _object setVariable [QGVAR(downloadStarted), true, true];
 _object setVariable [QGVAR(downloadInProgress), true, true];

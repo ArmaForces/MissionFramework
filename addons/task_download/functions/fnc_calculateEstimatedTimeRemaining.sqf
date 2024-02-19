@@ -20,6 +20,8 @@
 
 params ["_totalExpectedTime", ["_currentProgress", INITIAL_PROGRESS]];
 
+if (_currentProgress isEqualTo INITIAL_PROGRESS) exitWith { "Unknown" };
+
 private _timeLeft = _totalExpectedTime - _totalExpectedTime * (_currentProgress/100);
 
 private _timeLeftArray = [_timeLeft, "HH:MM:SS", RETURN_ARRAY] call BIS_fnc_secondsToString;

@@ -40,15 +40,16 @@ private _terminalPrepare = [
         " $" // replaced with next
     ], [
         " ligma@balls:~$ ls",
-        "    arma3      bateleeye     confidental  free-bpp",
-        "    genocides  hypercas      mk-xiv       music",
-        "    pictures   special-arma",
+        "    arma3     bateleeye     free-bpp  genocides",
+        "    hypercas  mk-xiv        music     pictures",
+        "    secret    special-arma  wdzydze",
         "",
         " ligma@balls:~$" // replaced with next
     ], [
-        " ligma@balls:~$ ls confidental/",
-        "    accounts.xls  arsenal  embassy        furries",
-        "    identities    plans    renchon_nudes  weapons",
+        " ligma@balls:~$ ls secret/",
+        "    accounts.xls       arsenal     embassy.txt",
+        "    furries              identities  plans",
+        "    renchon_nudes.tar  weapons",
         ""
     ], [
         " ligma@balls:~$ mkdir -p /mnt/usb",
@@ -57,7 +58,8 @@ private _terminalPrepare = [
         " ligma@balls:~$ mount /dev/sdb1 /mnt/usb",
         " ligma@balls:~$" // replaced with next
     ], [
-        " ligma@balls:~$ /mnt/usb/tyrone.py /home/confidential/furries --wipe",
+        " ligma@balls:~$ /mnt/usb/steal.py /home/secret/furries",
+        "               >> --wipe",
         "",
         "     Preparing...",
         "",
