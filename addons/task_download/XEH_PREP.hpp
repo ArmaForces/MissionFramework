@@ -5,6 +5,5 @@ PREP(formatProgress);
 PREP(initDownloadAction);
 PREP(initGetPendriveAction);
 PREP(prepareDisplay);
-PREP(randomDateTime);
 PREP(setupSimple);
 PREP(start);

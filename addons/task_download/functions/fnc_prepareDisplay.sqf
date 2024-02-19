@@ -26,9 +26,6 @@
 
 params ["_object", "_textureSource", "_fileSize", "_downloadTime"];
 
-private _lastLoginTime = _object getVariable [QGVAR(lastLoginDate), call FUNC(randomDateTime)];
-_lastLoginTime params ["_weekDay", "_month", "_day", "_hours", "_minutes", "_seconds"];
-
 private _terminalLogin = " balls login:";
 private _terminalPrepare = [
     [
@@ -36,7 +33,7 @@ private _terminalPrepare = [
         " Password:",
         "" // replaced with next
     ], [
-        format [" Last Login: %1 %2 %3 %4:%5:%6", _weekDay, _month, _day, _hours, _minutes, _seconds],
+        "Welcome back Ligma! Balls waiting.",
         " ligma@balls:~$" // replaced with next
     ], [
         " ligma@balls:~$ ls",

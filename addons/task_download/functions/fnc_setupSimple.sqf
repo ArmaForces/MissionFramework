@@ -36,7 +36,6 @@ if (isServer) then {
     _object setVariable [QGVAR(startFailedMessage), _startFailedMessage];
 
     // For display progress on screen
-    _object setVariable [QGVAR(lastLoginDate), call FUNC(randomDateTime), true];
     _object setVariable [QGVAR(downloadStarted), false, true];
     _object setVariable [QGVAR(downloadInProgress), false, true];
     _object setVariable [QGVAR(downloadFinished), false, true];
