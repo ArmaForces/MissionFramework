@@ -24,17 +24,18 @@ if (!hasInterface) exitWith {};
 
 private _statement = {
     params ["_object"];
-    [QGVAR(checkProgress), [_object, player]] call CBA_fnc_serverEvent;
+    [QGVAR(pendriveUnplugged), [_object, player]] call CBA_fnc_serverEvent;
 };
 
 private _showCondition = {
     params ["_object"];
-    _object getVariable [QGVAR(downloadStarted), false]
+    _object getVariable [QGVAR(downloadFinished), false] &&
+    {!(_object getVariable [QGVAR(pendriveUnplugged), false])}
 };
 
 private _action = [
-    QGVAR(checkProgressAction),
-    LLSTRING(CheckProgressAction),
+    QGVAR(getPendriveAction),
+    LLSTRING(GetPendriveAction),
     "",
     _statement,
     _showCondition,
@@ -47,7 +48,5 @@ private _actionPath = [
     ["ACE_MainActions"],
     _action
 ] call ACEFUNC(interact_menu,addActionToObject);
-
-_object setVariable [QGVAR(checkProgressActionPath), _actionPath];
 
 nil

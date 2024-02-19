@@ -3,7 +3,12 @@
 if (isServer) then {
     [QGVAR(start), FUNC(start)] call CBA_fnc_addEventHandler;
 
-    [QGVAR(checkProgress), FUNC(checkProgress)] call CBA_fnc_addEventHandler;
+    [QGVAR(pendriveUnplugged), {
+        params ["_object"];
+
+        _object setVariable [QGVAR(pendriveUnplugged), true, true];
+        [QGVAR(successful), [_object]] call CBA_fnc_globalEvent;
+    }] call CBA_fnc_addEventHandler;
 
     [QGVAR(successful), {
         ["ocap_customEvent", ["generalEvent", "Intel was downloaded!"]] call CBA_fnc_serverEvent;
@@ -17,25 +22,8 @@ if (hasInterface) then {
 
     [QGVAR(started), FUNC(started)] call CBA_fnc_addEventHandler;
 
-    [QGVAR(startSuccessful), {
-        params ["_estimatedTimeLeft"];
-        systemChat format [LLSTRING(Started), _estimatedTimeLeft];
-    }] call CBA_fnc_addEventHandler;
-
     [QGVAR(startFailed), {
         params ["_msg"];
         systemChat (_msg call BIS_fnc_localize);
     }] call CBA_fnc_addEventHandler;
-
-    [QGVAR(showProgress), {
-        params ["_object", "_progress", "_estimatedTimeLeft"];
-        systemChat format [LLSTRING(StatusReport), _progress, _estimatedTimeLeft];
-    }] call CBA_fnc_addEventHandler;
-
-    [QGVAR(showProgressCompleted), {
-        params ["_object"];
-        systemChat LLSTRING(Finished);
-    }] call CBA_fnc_addEventHandler;
-
-    [QGVAR(initCheckProgressAction), FUNC(initCheckProgressAction)] call CBA_fnc_addEventHandler;
 };

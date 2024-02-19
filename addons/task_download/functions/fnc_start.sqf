@@ -16,9 +16,11 @@
  * Public: No
  */
 
-#define RETURN_ARRAY true
+#define PREPARATION_TIME 20
 
 params ["_object", "_player"];
+
+if (!isServer) exitWith {};
 
 private _startCondition = _object getVariable [QGVAR(startCondition), FUNC(canContinue)];
 private _canStart = [_object] call _startCondition;
@@ -27,20 +29,24 @@ if (!_canStart) exitWith {
     [QGVAR(startFailed), [_msg], _player] call CBA_fnc_targetEvent;
 };
 
-_object setVariable [QGVAR(downloadIntel_active), true];
+private _totalDownloadTime = _object getVariable [QGVAR(downloadTime), 0];
+private _downloadStartTime = CBA_missionTime + PREPARATION_INTERVAL * PREPARATION_STAGES;
+private _timeToDownloadEnd = _downloadStartTime + _totalDownloadTime;
+
 _object setVariable [QGVAR(downloadStarted), true, true];
+_object setVariable [QGVAR(downloadInProgress), true, true];
+_object setVariable [QGVAR(downloadStartTime), _downloadStartTime, true];
 
-private _totalExpectedTime = _object getVariable [QGVAR(downloadTime), 0];
-private _progressPerTick = MAX_PROGRESS / (_totalExpectedTime / PROGRESS_INTERVAL);
-
-[FUNC(loop), [_object, _progressPerTick]] call CBA_fnc_execNextFrame;
-
-// Show estimated time left to a player who started the download
-private _expectedRemainingTimeText = [_totalExpectedTime] call FUNC(calculateEstimatedTimeRemaining);
-
-[QGVAR(startSuccessful), [_expectedRemainingTimeText], _player] call CBA_fnc_targetEvent;
-
-[QGVAR(initCheckProgressAction), [_object]] call CBA_fnc_globalEventJIP;
+[{!([_this select 0] call FUNC(canContinue))}, {
+    // Download interrupted
+    params ["_object"];
+    [QGVAR(failed)] call CBA_fnc_globalEvent;
+}, [_object], _timeToDownloadEnd, {
+    // Download finished
+    params ["_object"];
+    _object setVariable [QGVAR(downloadFinished), true, true];
+    _object setVariable [QGVAR(downloadInProgress), false, true];
+}] call CBA_fnc_waitUntilAndExecute;
 
 // Invoke public event
 [QGVAR(started), [_object]] call CBA_fnc_globalEvent;

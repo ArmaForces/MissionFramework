@@ -26,12 +26,10 @@
 
 params ["_object", "_textureSource", "_fileSize", "_downloadTime"];
 
-if (!isServer) exitWith {};
-
 private _lastLoginTime = _object getVariable [QGVAR(lastLoginDate), call FUNC(randomDateTime)];
 _lastLoginTime params ["_weekDay", "_month", "_day", "_hours", "_minutes", "_seconds"];
 
-private _terminalLogin = " loki login:";
+private _terminalLogin = " balls login:";
 private _terminalPrepare = [
     [
         format ["%1 Ligma", _terminalLogin],
@@ -41,35 +39,30 @@ private _terminalPrepare = [
         format [" Last Login: %1 %2 %3 %4:%5:%6 on ttyl", _weekDay, _month, _day, _hours, _minutes, _seconds],
         " $" // replaced with next
     ], [
-        " $ sysinfo",
-        "    Ligma@loki",
-        "    -----------",
-        "    OS: Arch Linux x86_64",
-        "    Host: 23475K3 ThinkPad T430",
-        "    Kernel: 6.4.8-arch1-1",
-        "    Packages: 1277 (pacman)",
-        "    Shell: zsh 5.9",
-        "    Resolution: 1600x900",
-        "    WM: i3",
-        "    Theme: Equilux [GTK2/3]",
-        "    Icons: Papirus-Dark [GTK2/3]",
-        "    Terminal: kitty",
-        "    CPU: Intel i5-3320M (4) @ 3.300GHz",
-        "    GPU: Intel Graphics Controller",
-        "    Memory: 9238MiB / 15258MiB",
+        " ligma@balls:~$ ls",
+        "    arma3      bateleeye     confidental  free-bpp",
+        "    genocides  hypercas      mk-xiv       music",
+        "    pictures   special-arma",
         "",
-        " $" // replaced with next
+        " ligma@balls:~$" // replaced with next
     ], [
-        " $ mkdir -p /mnt/usb",
-        " $" // replaced with next
+        " ligma@balls:~$ ls confidental/",
+        "    accounts.xls  arsenal  embassy        furries",
+        "    identities    plans    renchon_nudes  weapons",
+        ""
     ], [
-        " $ mount /dev/sdb1 /mnt/usb",
-        " $" // replaced with next
+        " ligma@balls:~$ mkdir -p /mnt/usb",
+        " ligma@balls:~$" // replaced with next
     ], [
-        " $ /mnt/usb/tyrone.py /home/ligma/confidential --wipe",
+        " ligma@balls:~$ mount /dev/sdb1 /mnt/usb",
+        " ligma@balls:~$" // replaced with next
+    ], [
+        " ligma@balls:~$ /mnt/usb/tyrone.py /home/confidential/furries --wipe",
         "",
         "     Preparing...",
         "",
+        "" // replaced with next
+    ], [
         "", // replaced with progress bar
         "",
         "" // replaced with estimated remaining time
@@ -77,6 +70,6 @@ private _terminalPrepare = [
 ];
 
 private _texture = format ['#(rgb,512,512,3)text(0,0,"EtelkaMonospacePro",0.03,"#1A1818","#00B200","%1")', _terminalLogin];
-_object setObjectTextureGlobal [_textureSource, _texture];
+_object setObjectTexture [_textureSource, _texture];
 
 [FUNC(displayProgressOnScreen), 0.1, [CBA_missionTime, [], _object, _fileSize, _textureSource, GVAR(displayProgressOnScreenRefreshInterval), _terminalPrepare]] call CBA_fnc_addPerFrameHandler;
