@@ -36,8 +36,8 @@ private _terminalPrepare = [
         " Password:",
         "" // replaced with next
     ], [
-        format [" Last Login: %1 %2 %3 %4:%5:%6 on ttyl", _weekDay, _month, _day, _hours, _minutes, _seconds],
-        " $" // replaced with next
+        format [" Last Login: %1 %2 %3 %4:%5:%6", _weekDay, _month, _day, _hours, _minutes, _seconds],
+        " ligma@balls:~$" // replaced with next
     ], [
         " ligma@balls:~$ ls",
         "    arma3     bateleeye     free-bpp  genocides",
@@ -50,7 +50,7 @@ private _terminalPrepare = [
         "    accounts.xls       arsenal     embassy.txt",
         "    furries              identities  plans",
         "    renchon_nudes.tar  weapons",
-        ""
+        " ligma@balls:~$" // replaced with next
     ], [
         " ligma@balls:~$ mkdir -p /mnt/usb",
         " ligma@balls:~$" // replaced with next
