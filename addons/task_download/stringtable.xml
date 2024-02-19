@@ -9,9 +9,9 @@
             <English>Check download progress</English>
             <Polish>Sprawdź status pobierania</Polish>
         </Key>
-        <Key ID="STR_AFMF_Task_Download_GetPendriveAction">
-            <English>Get pendrive</English>
-            <Polish>Weź pendrive</Polish>
+        <Key ID="STR_AFMF_Task_Download_GetDeviceAction">
+            <English>Unplug device</English>
+            <Polish>Odepnij nośnik</Polish>
         </Key>
         <Key ID="STR_AFMF_Task_Download_StartAction">
             <English>Start download</English>

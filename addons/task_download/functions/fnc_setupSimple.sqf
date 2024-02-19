@@ -7,8 +7,7 @@
  * Arguments:
  * 0: Object that will have download action added <OBJECT>
  * 1: Time it will take for the download to finish <NUMBER>
- * 2: Condition that must be fulfilled for the download to start when action is used <FUNC> (Optional)
- * 3: Message that will be shown to player starting the download if the download couldn't start <STRING> (Optional)
+ * 2: Size of the download <NUMBER>
  *
  * Return Value:
  * Set up finished correctly <BOOL>
@@ -22,18 +21,15 @@
 params [
     "_object",
     "_downloadTime",
-    ["_downloadSize", 2137],
-    ["_startCondition", FUNC(canContinue)],
-    ["_startFailedMessage", LSTRING(StartActionFailed)]
+    "_downloadSize"
 ];
 
+if (isNil "_downloadTime" || isNil "_downloadSize") exitWith { false };
 if (!([_object] call FUNC(canContinue))) exitWith { false };
 
 if (isServer) then {
     _object setVariable [QGVAR(initialized), true, true];
     _object setVariable [QGVAR(downloadTime), _downloadTime];
-    _object setVariable [QGVAR(startCondition), _startCondition];
-    _object setVariable [QGVAR(startFailedMessage), _startFailedMessage];
 
     // For display progress on screen
     _object setVariable [QGVAR(downloadStarted), false, true];
@@ -50,7 +46,7 @@ if (hasInterface) then {
     _object setVariable [QGVAR(downloadIntel_prepareStage_client), 0];
 
     [_object] call FUNC(initDownloadAction);
-    [_object] call FUNC(initGetPendriveAction);
+    [_object] call FUNC(initGetDeviceAction);
     [_object, 0, _downloadSize, _downloadTime] call FUNC(prepareDisplay);
 };
 

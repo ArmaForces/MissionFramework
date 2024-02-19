@@ -24,18 +24,18 @@ if (!hasInterface) exitWith {};
 
 private _statement = {
     params ["_object"];
-    [QGVAR(pendriveUnplugged), [_object, player]] call CBA_fnc_serverEvent;
+    [QGVAR(deviceUnplugged), [_object, player]] call CBA_fnc_serverEvent;
 };
 
 private _showCondition = {
     params ["_object"];
     _object getVariable [QGVAR(downloadFinished), false] &&
-    {!(_object getVariable [QGVAR(pendriveUnplugged), false])}
+    {!(_object getVariable [QGVAR(deviceUnplugged), false])}
 };
 
 private _action = [
-    QGVAR(getPendriveAction),
-    LLSTRING(GetPendriveAction),
+    QGVAR(getDeviceAction),
+    LLSTRING(GetDeviceAction),
     "",
     _statement,
     _showCondition,

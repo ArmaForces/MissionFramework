@@ -3,10 +3,10 @@
 if (isServer) then {
     [QGVAR(start), FUNC(start)] call CBA_fnc_addEventHandler;
 
-    [QGVAR(pendriveUnplugged), {
+    [QGVAR(deviceUnplugged), {
         params ["_object"];
 
-        _object setVariable [QGVAR(pendriveUnplugged), true, true];
+        _object setVariable [QGVAR(deviceUnplugged), true, true];
         [QGVAR(successful), [_object]] call CBA_fnc_globalEvent;
     }] call CBA_fnc_addEventHandler;
 

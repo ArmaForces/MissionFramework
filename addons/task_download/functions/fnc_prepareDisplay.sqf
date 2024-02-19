@@ -45,7 +45,7 @@ private _terminalPrepare = [
     ], [
         " ligma@balls:~$ ls secret/",
         "    accounts.xls       arsenal     embassy.txt",
-        "    furries              identities  plans",
+        "    furries            identities  plans",
         "    renchon_nudes.tar  weapons",
         " ligma@balls:~$" // replaced with next
     ], [

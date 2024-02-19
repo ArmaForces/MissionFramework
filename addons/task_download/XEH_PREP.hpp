@@ -3,7 +3,7 @@ PREP(displayProgressOnScreen);
 PREP(formatEstimatedTimeRemaining);
 PREP(formatProgress);
 PREP(initDownloadAction);
-PREP(initGetPendriveAction);
+PREP(initGetDeviceAction);
 PREP(prepareDisplay);
 PREP(setupSimple);
 PREP(start);

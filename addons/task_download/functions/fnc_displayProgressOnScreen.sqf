@@ -13,8 +13,9 @@
  *  1: Current terminal content <ARRAY>
  *  2: Object used for download <OBJECT>
  *  3: Total file size (in GB) to download <NUMBER>
- *  4: Download tick rate <NUMBER>
- *  5: Pending terminal prepare steps <ARRAY>
+ *  4: Texture source <NUMBER>
+ *  5: Download tick rate <NUMBER>
+ *  6: Pending terminal prepare steps <ARRAY>
  * 1: PFH Handle <NUMBER>
  *
  * Return Value:
@@ -101,7 +102,7 @@ if (_currentProgress isEqualTo MAX_PROGRESS) exitWith {
     _texture = format ['#(rgb,512,512,3)text(0,0,"EtelkaMonospacePro",0.03,"#1A1818","#00B200","%1")', _terminal joinString "\n"];
     _object setObjectTexture [_textureSource, _texture];
 
-    [{(_this select 0) getVariable [QGVAR(pendriveUnplugged), false]}, {
+    [{(_this select 0) getVariable [QGVAR(deviceUnplugged), false]}, {
         params ["_object", "_terminal", "_textureSource"];
 
         private _terminalDeviceUnplugged = [

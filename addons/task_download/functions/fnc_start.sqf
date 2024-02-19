@@ -22,12 +22,8 @@ params ["_object", "_player"];
 
 if (!isServer) exitWith {};
 
-private _startCondition = _object getVariable [QGVAR(startCondition), FUNC(canContinue)];
-private _canStart = [_object] call _startCondition;
-if (!_canStart) exitWith {
-    private _msg = _object getVariable [QGVAR(startFailedMessage), ""];
-    [QGVAR(startFailed), [_msg], _player] call CBA_fnc_targetEvent;
-};
+private _canStart = [_object] call FUNC(canContinue);
+if (!_canStart) exitWith {};
 
 private _totalDownloadTime = _object getVariable [QGVAR(downloadTime), 0];
 private _downloadStartTime = CBA_missionTime + PREPARATION_DURATION;
