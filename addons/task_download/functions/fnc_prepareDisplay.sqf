@@ -24,7 +24,8 @@
  * Public: No
  */
 
-params ["_object", "_textureSource", "_fileSize", "_downloadTime"];
+params ["_object", "_textureSelection", "_fileSize", "_downloadTime"];
+
 
 private _terminalLogin = " balls login:";
 private _terminalPrepare = [
@@ -69,6 +70,6 @@ private _terminalPrepare = [
 ];
 
 private _texture = format ['#(rgb,512,512,3)text(0,0,"EtelkaMonospacePro",0.03,"#1A1818","#00B200","%1")', _terminalLogin];
-_object setObjectTexture [_textureSource, _texture];
+_object setObjectTexture [_textureSelection, _texture];
 
-[FUNC(displayProgressOnScreen), 0.1, [CBA_missionTime, [], _object, _fileSize, _textureSource, GVAR(displayProgressOnScreenRefreshInterval), _terminalPrepare]] call CBA_fnc_addPerFrameHandler;
+[FUNC(displayProgressOnScreen), 0.1, [CBA_missionTime, [], _object, _fileSize, _textureSelection, GVAR(displayProgressOnScreenRefreshInterval), _terminalPrepare]] call CBA_fnc_addPerFrameHandler;

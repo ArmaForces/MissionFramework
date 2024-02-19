@@ -28,7 +28,7 @@
  */
 
 params ["_args", "_handle"];
-_args params ["_lastTime", "_terminal", "_object", "_fileSize", "_textureSource", "_downloadTime", "_terminalPrepare"];
+_args params ["_lastTime", "_terminal", "_object", "_fileSize", "_textureSelection", "_downloadTime", "_terminalPrepare"];
 
 // Exit if download hasn't yet started
 if !(_object getVariable [QGVAR(downloadStarted), false]) exitWith {};
@@ -47,7 +47,7 @@ if (!_prepareFinished) exitWith {
     _terminal append (_terminalPrepare select _prepareStage);
 
     private _texture = format ['#(rgb,512,512,3)text(0,0,"EtelkaMonospacePro",0.03,"#1A1818","#00B200","%1")', _terminal joinString "\n"];
-    _object setObjectTexture [_textureSource, _texture];
+    _object setObjectTexture [_textureSelection, _texture];
     _object setVariable [QGVAR(downloadIntel_prepareStage_client), _prepareStage + 1];
 
     if (_prepareStage + 1 >= count _terminalPrepare) then {
@@ -88,7 +88,7 @@ private _timeText = if (_currentProgress isEqualTo MAX_PROGRESS) then {
 _terminal set [-1, _timeText];
 
 _texture = format ['#(rgb,512,512,3)text(0,0,"EtelkaMonospacePro",0.03,"#1A1818","#00B200","%1")', _terminal joinString "\n"];
-_object setObjectTexture [_textureSource, _texture];
+_object setObjectTexture [_textureSelection, _texture];
 
 // Finish
 if (_currentProgress isEqualTo MAX_PROGRESS) exitWith {
@@ -100,10 +100,10 @@ if (_currentProgress isEqualTo MAX_PROGRESS) exitWith {
     ];
     _terminal append _terminalFinal;
     _texture = format ['#(rgb,512,512,3)text(0,0,"EtelkaMonospacePro",0.03,"#1A1818","#00B200","%1")', _terminal joinString "\n"];
-    _object setObjectTexture [_textureSource, _texture];
+    _object setObjectTexture [_textureSelection, _texture];
 
     [{(_this select 0) getVariable [QGVAR(deviceUnplugged), false]}, {
-        params ["_object", "_terminal", "_textureSource"];
+        params ["_object", "_terminal", "_textureSelection"];
 
         private _terminalDeviceUnplugged = [
             "",
@@ -112,6 +112,6 @@ if (_currentProgress isEqualTo MAX_PROGRESS) exitWith {
 
         _terminal append _terminalDeviceUnplugged;
         _texture = format ['#(rgb,512,512,3)text(0,0,"EtelkaMonospacePro",0.03,"#1A1818","#00B200","%1")', _terminal joinString "\n"];
-        _object setObjectTexture [_textureSource, _texture];
-    }, [_object, _terminal, _textureSource]] call CBA_fnc_waitUntilAndExecute;
+        _object setObjectTexture [_textureSelection, _texture];
+    }, [_object, _terminal, _textureSelection]] call CBA_fnc_waitUntilAndExecute;
 };
