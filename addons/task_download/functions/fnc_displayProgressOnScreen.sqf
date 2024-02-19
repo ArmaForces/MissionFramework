@@ -104,6 +104,7 @@ if (_currentProgress isEqualTo MAX_PROGRESS) exitWith {
 
     [{(_this select 0) getVariable [QGVAR(deviceUnplugged), true]}, {
         params ["_object", "_terminal", "_textureSelection"];
+        INFO_1("Device unplugged %1",_object);
 
         private _terminalDeviceUnplugged = [
             "",
