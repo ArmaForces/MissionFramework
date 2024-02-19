@@ -15,7 +15,7 @@
  * Example:
  * [laptop] call afmf_task_download_fnc_setup
  *
- * Public: No
+ * Public: Yes
  */
 
 params [

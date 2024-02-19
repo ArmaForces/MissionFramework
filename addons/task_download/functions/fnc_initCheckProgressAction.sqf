@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Initializes download action on given object.
+ * Initializes check progress action on given object.
  * Runs clientside.
  *
  * Arguments:
