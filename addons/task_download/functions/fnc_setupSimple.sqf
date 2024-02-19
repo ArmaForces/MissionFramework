@@ -13,7 +13,7 @@
  * Set up finished correctly <BOOL>
  *
  * Example:
- * [laptop] call afmf_task_download_fnc_setupSimple
+ * [laptop, 66, 2096] call afmf_task_download_fnc_setupSimple
  *
  * Public: Yes
  */
