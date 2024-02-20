@@ -5,9 +5,9 @@ A simple script that tracks "download" of some data and publishes event on succe
 ## Setup
 
 ```SQF
-private _downloadTime = 900;
-private _downloadSize = 3.42
-private _result = [laptop, _downloadTime, _downloadSize] call afmf_task_download_fnc_setup;
+private _downloadTime = 900; // In seconds
+private _downloadSize = 3.42; // In GB
+private _result = [laptop, _downloadTime, _downloadSize] call afmf_task_download_fnc_setupSimple;
 ```
 
 ## Settings
