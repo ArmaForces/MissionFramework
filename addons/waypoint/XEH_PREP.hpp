@@ -1,2 +1,2 @@
-PREP(fnc_moveVehicleWp);
+PREP(moveVehicleWp);
 
