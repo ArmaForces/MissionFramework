@@ -19,7 +19,7 @@ if !(local _group) exitwith {false};
 //vehicle list
 private _vehicles = [];
 {
-	_vehicles pushBackUnique (vehicle _x);
+    _vehicles pushBackUnique (vehicle _x);
 } forEach (units _group);
 
 _vehicles = _vehicles select {assignedDriver _x in (units _group)};
