@@ -62,4 +62,4 @@ if !(_vehicle getVariable [QGVAR(ActiveVehicleMove), false]) then {
 ] call CBA_fnc_waitUntilAndExecute;
 };
 
-waitUntil {sleep 0.2; !(_vehicle getVariable [QGVAR(ActiveVehicleMove),false])};
+waitUntil {sleep 0.2; !(_vehicle getVariable [QGVAR(ActiveVehicleMove),false])}

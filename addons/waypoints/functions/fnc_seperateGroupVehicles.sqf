@@ -30,4 +30,4 @@ params ["_vehicles"];
     if !(_waypointScript == "") then {
          _waypoint setWaypointScript _waypointScript;
          };
-} forEach _vehicles;
+} forEach _vehicles
