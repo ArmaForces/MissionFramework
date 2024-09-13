@@ -36,7 +36,7 @@ class Cfg3DEN {
             w = QUOTE(130 * ATTRIBUTE_W);
             h = QUOTE((10 + 5 + 5 + 25) * ATTRIBUTE_H);
 
-            attributeLoad = QUOTE([ARR_2(_this, _value)] call FUNC(attributeSupplyClassesLoad));
+            attributeLoad = QUOTE([ARR_2(_this,_value)] call FUNC(attributeSupplyClassesLoad));
             attributeSave = QUOTE([_this] call FUNC(attributeSupplyClassesSave));
 
             class Controls {
@@ -84,20 +84,20 @@ class Cfg3DEN {
 
                     onButtonClick = QUOTE(_this call FUNC(attributeSupplyClassesAdd));
 
-                    x = QUOTE( (COL_W + BTN_W / 2 + BTN_W / 3 + 2.5) * ATTRIBUTE_W);
+                    x = QUOTE((COL_W + BTN_W / 2 + BTN_W / 3 + 2.5) * ATTRIBUTE_W);
                     y = QUOTE(20 * ATTRIBUTE_H);
-                    w = QUOTE( BTN_W * ATTRIBUTE_W);
-                    h = QUOTE( BTN_W * ATTRIBUTE_W);
+                    w = QUOTE(BTN_W * ATTRIBUTE_W);
+                    h = QUOTE(BTN_W * ATTRIBUTE_W);
                 };
                 class ButtonRemove: ctrlButton {
                     text = "-";
 
                     onButtonClick = QUOTE(_this call FUNC(attributeSupplyClassesRemove));
 
-                    x = QUOTE( (COL_W + BTN_W / 2 + BTN_W / 3 + 2.5) * ATTRIBUTE_W);
+                    x = QUOTE((COL_W + BTN_W / 2 + BTN_W / 3 + 2.5) * ATTRIBUTE_W);
                     y = QUOTE(30 * ATTRIBUTE_H);
-                    w = QUOTE( BTN_W * ATTRIBUTE_W);
-                    h = QUOTE( BTN_W * ATTRIBUTE_W);
+                    w = QUOTE(BTN_W * ATTRIBUTE_W);
+                    h = QUOTE(BTN_W * ATTRIBUTE_W);
                 };
 
                 class SelectedList: ctrlListbox {
