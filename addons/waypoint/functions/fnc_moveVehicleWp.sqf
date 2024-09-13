@@ -27,7 +27,7 @@ _vehicles = _vehicles select {assignedDriver _x in (units _group)};
 if (count _vehicles == 0) exitwith {true};
 
 
-private _LeaderVehicle = vehicle leader _group;
+private _leaderVehicle = vehicle leader _group;
 
 // create groups with waypoint for vehicles without leader vehicle
 {
@@ -76,8 +76,8 @@ if !(_LeaderVehicle getvariable [QGVAR(ActiveVehicleMove),false]) then {
         _driver disableAI "AUTOTARGET";
         _driver disableAI "AUTOCOMBAT";
         _driver disableAI "TARGET";
-        _driver disableai "COVER";
-        _driver disableai "FSM";
+        _driver disableAI "COVER";
+        _driver disableAI "FSM";
         _driver setBehaviour "AWARE";
 
         _LeaderVehicle setvariable [QGVAR(DriverWaitTime),(time + 1)];
@@ -95,8 +95,8 @@ if !(_LeaderVehicle getvariable [QGVAR(ActiveVehicleMove),false]) then {
             if (_vehicle getvariable QGVAR(DriverWaitTime) < time) then {
                     _vehicle setvariable [QGVAR(DriverWaitTime),(time + 2)];
                     if (speed _vehicle < 4) then {
-                        (driver _vehicle) disableAI "Path";
-                        (driver _vehicle) enableAI "Path";
+                        (driver _vehicle) disableAI "PATH";
+                        (driver _vehicle) enableAI "PATH";
                     };
                     if !(isFormationLeader (driver _vehicle)) then {
                         (driver _vehicle) doFollow leader (driver _vehicle);
