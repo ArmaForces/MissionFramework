@@ -17,3 +17,4 @@ class CfgPatches {
 
 #include "CfgWaypoints.cfg"
 #include "ZEN_CfgWaypointTypes.hpp"
+#include "CfgEventHandlers.hpp"

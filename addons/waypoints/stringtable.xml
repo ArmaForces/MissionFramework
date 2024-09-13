@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="AFMF">
-    <Package name="Waypoint">
-        <Key ID="STR_AFMF_Waypoint_Vehicle_Move_Name">
+    <Package name="Waypoints">
+        <Key ID="STR_AFMF_Waypoints_VehicleMoveName">
             <English>Direct Vehicle Move</English>
             <Polish>Bezpośredni ruch pojazdu</Polish>
         </Key>
-         <Key ID="STR_AFMF_Waypoint_Vehicle_Move_Description">
+         <Key ID="STR_AFMF_Waypoints_VehicleMoveDescription">
             <English>Direct Vehicle Move. Waypoint create new groups for all drivers in original group and assign new waypoint for them. Waypoint is complete after reaching destination or after losing life by driver</English>
             <Polish>Bezpośredni ruch pojazdu. Waypoint tworzy nowe grupy na każdego kierowce który znajduję się w grupie i przypisuje im również waypoint. Zalicza się po dotarciu lub straceniu życia przez kierowce</Polish>
         </Key>
