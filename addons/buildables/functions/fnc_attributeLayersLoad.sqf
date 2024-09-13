@@ -16,7 +16,7 @@ params ["_control"];
 
 private _picture = getText (configFile >> 'Cfg3DEN' >> 'Layer' >> 'Draw' >> 'icon');
 private _layerText = localize 'STR_3DEN_Layer_textSingular';
-private _layers = (all3DENEntities select 6) apply {(_x get3DENAttribute 'Name') select 0};
+private _layers = (all3DENEntities select 6) apply {(_x get3DENAttribute 'name') select 0};
 
 _layers sort true;
 

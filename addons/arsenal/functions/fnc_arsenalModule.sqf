@@ -51,7 +51,7 @@ if (!IS_MOD_LOADED(ace_arsenal)) exitWith {
     } forEach _syncedUnits;
 
     if (_allGoggles) then {
-        _gear append (("getNumber (_x >> 'scope') > 0" configClasses (configfile >> "CfgGlasses")) apply {configName _x});
+        _gear append (("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgGlasses")) apply {configName _x});
     };
 
     // remove duplicates
