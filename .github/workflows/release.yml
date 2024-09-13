@@ -9,13 +9,13 @@ jobs:
   build_addon:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     - name: Set VERSION env
       run: echo VERSION=${GITHUB_REF:11} >> $GITHUB_ENV
-    - name: Build addon with HEMTT
-      uses: 16AAModTeam/hemtt@stable
-      with:
-        command: 'build --release'
+    - name: Setup HEMTT
+      uses: arma-actions/hemtt@v1
+    - name: Run HEMTT release
+      run: hemtt release
     # Upload to GitHub
     - uses: softprops/action-gh-release@v1
       with:
