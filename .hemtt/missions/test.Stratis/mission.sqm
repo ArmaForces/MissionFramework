@@ -8,18 +8,22 @@ class EditorData
 	toggles=1025;
 	class ItemIDProvider
 	{
-		nextID=38;
+		nextID=42;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
 	};
 	class LayerIndexProvider
 	{
-		nextID=7;
+		nextID=10;
 	};
 	class Camera
 	{
-		pos[]={2084.8445,76.047676,5701.1846};
-		dir[]={-0.35599858,-0.73858523,-0.57250059};
-		up[]={-0.390019,0.67416006,-0.62721074};
-		aside[]={-0.84920561,1.4901161e-08,0.52806228};
+		pos[]={2099.7041,76.047676,5718.2485};
+		dir[]={-0.45990524,-0.62080646,-0.63489193};
+		up[]={-0.3641907,0.78396374,-0.50275874};
+		aside[]={-0.80984825,-1.5017577e-08,0.58664072};
 	};
 };
 binarizationWanted=0;
@@ -31,13 +35,14 @@ addons[]=
 	"afmf_buildables",
 	"A3_Signs_F",
 	"A3_Weapons_F_Ammoboxes",
-	"afmf_locations"
+	"afmf_locations",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=6;
+		items=7;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -78,6 +83,13 @@ class AddonsMetaData
 			name="AFMF - locations";
 			author="ArmaForces";
 		};
+		class Item6
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=2670849;
@@ -109,7 +121,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=9;
+		items=13;
 		class Item0
 		{
 			dataType="Layer";
@@ -623,7 +635,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1998.2939,6.1540403,5627.6709};
+				position[]={2002.25,6.169208,5627.2622};
+				angles[]={6.2456956,0,0.0074874624};
 			};
 			name="afmf_editLocationModule";
 			id=37;
@@ -639,7 +652,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="Stratis Air Base";
+							value="Cool Name";
 						};
 					};
 				};
@@ -656,7 +669,193 @@ class Mission
 						};
 					};
 				};
-				nAttributes=2;
+				class Attribute2
+				{
+					property="afmf_locations_hide";
+					expression="_this setVariable ['afmf_locations_hide',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item9
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3316.5879,215.31047,3032.72};
+				angles[]={0.30970868,0,0.052447144};
+			};
+			name="afmf_editLocationModule_1";
+			id=38;
+			type="afmf_locations_editModule";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="afmf_locations_location";
+					expression="_this setVariable ['afmf_locations_location',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Camp Maxwell (Hidden)";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="afmf_locations_name";
+					expression="_this setVariable ['afmf_locations_name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="afmf_locations_hide";
+					expression="_this setVariable ['afmf_locations_hide',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item10
+		{
+			dataType="Marker";
+			position[]={3292.0254,229.18222,2928.978};
+			name="marker_0";
+			text="Some Camp";
+			type="mil_triangle";
+			id=39;
+		};
+		class Item11
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1704.6689,5.5,5536.8911};
+			};
+			name="afmf_editLocationModule_2";
+			id=40;
+			type="afmf_locations_editModule";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="afmf_locations_location";
+					expression="_this setVariable ['afmf_locations_location',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Runway";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="afmf_locations_name";
+					expression="_this setVariable ['afmf_locations_name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Runway";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="afmf_locations_hide";
+					expression="_this setVariable ['afmf_locations_hide',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item12
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1779.717,0.00019741058,3551.2881};
+			};
+			name="afmf_editLocationModule_3";
+			id=41;
+			type="afmf_locations_editModule";
+			atlOffset=10.701001;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="afmf_locations_location";
+					expression="_this setVariable ['afmf_locations_location',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="ArmaForces Bay";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="afmf_locations_name";
+					expression="_this setVariable ['afmf_locations_name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="ArmaForces Bay";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="afmf_locations_hide";
+					expression="_this setVariable ['afmf_locations_hide',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=3;
 			};
 		};
 	};

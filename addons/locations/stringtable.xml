@@ -5,6 +5,10 @@
             <English>Edit Location</English>
             <Polish>Edytuj Lokacje</Polish>
         </Key>
+        <Key ID="STR_AFMF_Locations_Hidden">
+            <English>Hidden</English>
+            <Polish>Ukryta</Polish>
+        </Key>
         <!-- Attributes -->
         <Key ID="STR_AFMF_Locations_AreaModule_Attribute_Location">
             <English>Location</English>
@@ -13,6 +17,10 @@
         <Key ID="STR_AFMF_Locations_AreaModule_Attribute_Name">
             <English>New name</English>
             <Polish>Nowa nazwa</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Locations_AreaModule_Attribute_Hide">
+            <English>Hide</English>
+            <Polish>Ukryj</Polish>
         </Key>
     </Package>
 </Project>

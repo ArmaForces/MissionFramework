@@ -53,6 +53,12 @@ class CfgVehicles {
 
                 property = QGVAR(name);
             };
+
+            class GVAR(hide): Checkbox {
+                displayName = CSTRING(AreaModule_Attribute_Hide);
+
+                property = QGVAR(hide);
+            };
         };
     };
 };

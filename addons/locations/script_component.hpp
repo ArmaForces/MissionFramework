@@ -9,4 +9,5 @@
 
 #include "\z\afmf\addons\main\script_macros.hpp"
 
-#define NEAREST_LOCATION(VAR) (nearestLocation [getPosATL VAR, ["nameVillage", "nameCity", "nameCityCapital"], 2000])
+#define NAMED_LOCATIONS ["nameVillage", "nameCity", "nameCityCapital", "nameLocal", "nameMarine"]
+#define NEAREST_LOCATION(VAR) (nearestLocation [getPosATL VAR, NAMED_LOCATIONS, 2000])
