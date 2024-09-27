@@ -1,17 +1,13 @@
 #include "script_component.hpp"
 /*
  * Author: veteran29
- * Function description
+ * Update location attached to the module. For 3DEN.
  *
  * Arguments:
- * 0: Objects <ARRAY>
- * 1: All <BOOL>
+ * 0: Module <OBJECT>
  *
  * Return Value:
  * None
- *
- * Example:
- * [[bob, ted], false] call afmf_main_fnc_example
  *
  * Public: No
  */
