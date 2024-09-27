@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFMF">
+    <Package name="Locations">
+        <Key ID="STR_AFMF_Locations_EditModule_DisplayName">
+            <English>Edit Location</English>
+            <Polish>Edytuj Lokacje</Polish>
+        </Key>
+        <!-- Attributes -->
+        <Key ID="STR_AFMF_Locations_AreaModule_Attribute_Location">
+            <English>Location</English>
+            <Polish>Lokacja</Polish>
+        </Key>
+        <Key ID="STR_AFMF_Locations_AreaModule_Attribute_Name">
+            <English>New name</English>
+            <Polish>Nowa nazwa</Polish>
+        </Key>
+    </Package>
+</Project>

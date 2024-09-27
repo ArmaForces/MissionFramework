@@ -8,3 +8,5 @@
 // #define DISABLE_COMPILE_CACHE
 
 #include "\z\afmf\addons\main\script_macros.hpp"
+
+#define NEAREST_LOCATION(VAR) (nearestLocation [getPosATL VAR, ["nameVillage", "nameCity", "nameCityCapital"], 2000])

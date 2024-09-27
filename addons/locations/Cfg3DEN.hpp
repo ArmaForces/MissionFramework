@@ -16,5 +16,14 @@ class Cfg3DEN {
                 class Value;
             };
         };
+
+        class GVAR(EditDisabled): Edit {
+            class Controls: Controls {
+                class Title: Title {};
+                class Value: Value {
+                    onLoad = "(_this#0) ctrlEnable false";
+                };
+            };
+        };
     };
 };
