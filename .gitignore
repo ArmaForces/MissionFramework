@@ -13,3 +13,6 @@ symbols/*
 *.biprivatekey
 
 extension/target/
+
+# Ignor 3DEN mission backups
+.hemtt/missions/~*/
