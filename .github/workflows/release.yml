@@ -19,14 +19,14 @@ jobs:
     # Upload to GitHub
     - uses: softprops/action-gh-release@v1
       with:
-        files: 'releases/ArmaForces_MissionFramework_${{ env.VERSION }}.zip'
+        files: 'releases/afmf-${{ env.VERSION }}-*.zip'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     # Upload to Steam Workshop
     - uses: arma-actions/workshop-upload@v1
       with:
         itemId: '2377030287' # Id of item to update
-        contentPath: 'releases/${{ env.VERSION }}/@armaforces_mission_framework'
+        contentPath: '.hemttout/release'
         changelog: 'https://github.com/ArmaForces/MissionFramework/releases/tag/v${{ env.VERSION }}'
       env:
         STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
