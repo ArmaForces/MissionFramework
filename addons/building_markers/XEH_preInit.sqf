@@ -10,6 +10,8 @@ if (isServer) then {
     [QGVAR(delete), LINKFUNC(create)] call CBA_fnc_addEventHandler;
 };
 
+GVAR(enabled) = false;
+
 ["ModuleCurator_F", "Init", {
     params ["_logic"];
 

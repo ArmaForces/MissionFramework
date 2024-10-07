@@ -25,6 +25,9 @@
  * Public: Yes
  */
 
+#define MARKER_NAME (format [QGVAR(%1), _object call BIS_fnc_netId])
+#define MARKER_NAME_ICON (format [QGVAR(icon_%1), _object call BIS_fnc_netId])
+
 if (!isServer) exitWith {
     [QGVAR(create), _this] call CBA_fnc_serverEvent;
 };
@@ -55,17 +58,44 @@ if (_marker != "") exitWith {
 0 boundingBoxReal _object params ["_p0", "_p1"];
 private _size = _p1 vectorDiff _p0 vectorMultiply 0.5 select [0, 2];
 
-_marker = createMarker [format [QGVAR(%1), _object call BIS_fnc_netId], _object];
+private _marker = nil;
+private _mapType = (_x namedProperties ["Geometry"]) getOrDefault ["map", ""];
 
-switch ((_x namedProperties ["Geometry"]) getOrDefault ["map", ""]) do {
+switch (toLower _mapType) do {
+    case "watertower": {
+        _marker = createMarkerLocal [MARKER_NAME_ICON, _object];
+        _marker setMarkerTypeLocal "loc_WaterTower";
+        _marker setMarkerSizeLocal [0.9, 0.9];
+    };
+    case "fuelstation": {
+        _marker = createMarkerLocal [MARKER_NAME_ICON, _object];
+        _marker setMarkerTypeLocal "loc_Fuelstation";
+        _marker setMarkerSizeLocal [0.9, 0.9];
+    };
+    case "transmitter": {
+        _marker = createMarkerLocal [MARKER_NAME_ICON, _object];
+        _marker setMarkerTypeLocal "loc_Transmitter";
+        _marker setMarkerSizeLocal [0.9, 0.9];
+    };
+    case "lighthouse": {
+        _marker = createMarkerLocal [MARKER_NAME_ICON, _object];
+        _marker setMarkerTypeLocal "loc_Lighthouse";
+        _marker setMarkerSizeLocal [0.9, 0.9];
+    };
+    // todo check all possible types
+
     default {
+        _marker = createMarkerLocal [MARKER_NAME, _object];
         _marker setMarkerShapeLocal "RECTANGLE";
         _marker setMarkerColorLocal "ColorGrey";
         _marker setMarkerBrushLocal "SolidFull";
         _marker setMarkerSizeLocal _size;
-        _marker setMarkerDir getDir _object;
+        _marker setMarkerDirLocal getDir _object;
     };
 };
+
+// publish the marker
+_marker setMarkerPos markerPos _marker;
 
 _object setVariable [QGVAR(marker), _marker, true];
 
@@ -77,3 +107,7 @@ private _eventID = _object addEventHandler ["Deleted", {
 }];
 
 _object setVariable [QGVAR(eventID), _eventID];
+
+if (!GVAR(enabled)) then {
+    missionNamespace setVariable [QGVAR(enabled), true, true];
+};
