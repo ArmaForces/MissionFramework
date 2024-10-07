@@ -6,6 +6,4 @@ if (hasInterface) then {
 
     GVAR(visibleObj) = true;
     GVAR(landSizeInv) = 1 / (getTerrainInfo select 1);
-
-    (findDisplay 12 displayCtrl 51) ctrlAddEventHandler ["Draw", LINKFUNC(onMapDraw)];
 };

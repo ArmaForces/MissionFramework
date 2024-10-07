@@ -5,3 +5,5 @@
 // #define DISABLE_COMPILE_CACHE
 
 #include "\z\afmf\addons\main\script_macros.hpp"
+
+#define ID_DIARY_MAP 51

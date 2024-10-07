@@ -8,7 +8,7 @@ class EditorData
 	toggles=1025;
 	class ItemIDProvider
 	{
-		nextID=71;
+		nextID=72;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2175.8809,128.91605,5789.5972};
-		dir[]={-0.75035369,-0.58512437,-0.3075695};
-		up[]={-0.54140663,0.8109436,-0.22192225};
-		aside[]={-0.37927365,1.4901161e-08,0.92528474};
+		pos[]={2201.0251,197.84047,5826.1426};
+		dir[]={-0.64559025,-0.69446272,-0.3177025};
+		up[]={-0.62309998,0.71952862,-0.30663478};
+		aside[]={-0.44154248,0,0.8972404};
 	};
 };
 binarizationWanted=0;
@@ -32,6 +32,17 @@ addons[]=
 {
 	"A3_Structures_F_Mil_Fortification",
 	"A3_Characters_F",
+	"A3_Weapons_F_Rifles_MX",
+	"A3_Sounds_F",
+	"A3_Sounds_F_Enoch",
+	"A3_Weapons_F_Acc",
+	"A3_Weapons_F",
+	"A3_Weapons_F_Pistols_P07",
+	"A3_Drones_F_Weapons_F_Gamma_Items",
+	"A3_Characters_F_Orange_Facewear",
+	"A3_Weapons_F_Items",
+	"A3_Weapons_F_Explosives",
+	"A3_Weapons_F_Orange",
 	"afmf_buildables",
 	"A3_Signs_F",
 	"A3_Weapons_F_Ammoboxes",
@@ -45,13 +56,17 @@ addons[]=
 	"A3_Structures_F_Ind_Transmitter_Tower",
 	"A3_Structures_F_Enoch_Industrial_Farms",
 	"A3_Characters_F_Mark",
-	"A3_Structures_F_Ind_FuelStation_Small"
+	"A3_Weapons_F_Mark_Machineguns_MMG_02",
+	"A3_Weapons_F_Mark_Acc",
+	"A3_Weapons_F_Mark",
+	"A3_Structures_F_Ind_FuelStation_Small",
+	"A3_Structures_F_Dominants_Lighthouse"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=13;
+		items=20;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -68,75 +83,124 @@ class AddonsMetaData
 		};
 		class Item2
 		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Sounds_F";
+			name="Arma 3 - Sound Effects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Sounds_F_Enoch";
+			name="Arma 3 Contact Platform - Sound Effects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="A3_Drones_F";
+			name="Arma 3 Beta - Drones";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="A3_Characters_F_Orange";
+			name="Arma 3 Orange - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item7
+		{
+			className="A3_Weapons_F_Orange";
+			name="Arma 3 Orange - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item8
+		{
 			className="afmf_buildables";
 			name="AFMF - buildables";
 			author="ArmaForces";
 		};
-		class Item3
+		class Item9
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item4
-		{
-			className="A3_Weapons_F";
-			name="Arma 3 Alpha - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item5
+		class Item10
 		{
 			className="afmf_locations";
 			name="AFMF - locations";
 			author="ArmaForces";
 		};
-		class Item6
+		class Item11
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item12
 		{
 			className="A3_Structures_F_Exp_Civilian";
 			name="Arma 3 Apex - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item13
 		{
 			className="afmf_building_markers";
 			name="AFMF - building_markers";
 			author="ArmaForces";
 		};
-		class Item9
+		class Item14
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item15
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item16
 		{
 			className="A3_Structures_F_Enoch_Industrial";
 			name="Arma 3 Contact Platform - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item17
 		{
 			className="A3_Characters_F_Mark";
 			name="Arma 3 Marksmen - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item18
+		{
+			className="A3_Weapons_F_Mark";
+			name="Arma 3 Marksmen - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item19
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -178,7 +242,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=21;
+		items=18;
 		class Item0
 		{
 			dataType="Layer";
@@ -506,6 +570,159 @@ class Mission
 					class Attributes
 					{
 						isPlayer=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="arifle_MXC_F";
+								optics="optic_Holosight";
+								flashlight="acc_pointer_IR";
+								class primaryMuzzleMag
+								{
+									name="30Rnd_65x39_caseless_mag";
+									ammoLeft=30;
+								};
+							};
+							class handgun
+							{
+								name="hgun_P07_F";
+								class primaryMuzzleMag
+								{
+									name="16Rnd_9x21_Mag";
+									ammoLeft=16;
+								};
+							};
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam_vest";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="30Rnd_65x39_caseless_mag";
+										count=2;
+										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="Chemlight_green";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="V_Chestrig_rgr";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=8;
+									class Item0
+									{
+										name="30Rnd_65x39_caseless_mag";
+										count=3;
+										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="16Rnd_9x21_Mag";
+										count=2;
+										ammoLeft=16;
+									};
+									class Item2
+									{
+										name="HandGrenade";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="SmokeShell";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item4
+									{
+										name="SmokeShellGreen";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item5
+									{
+										name="SmokeShellBlue";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item6
+									{
+										name="SmokeShellOrange";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item7
+									{
+										name="Chemlight_green";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+							};
+							class backpack
+							{
+								typeName="B_Kitbag_mcamo_Eng";
+								isBackpack=1;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="SatchelCharge_Remote_Mag";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="DemoCharge_Remote_Mag";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ToolKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="MineDetector";
+										count=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							gps="B_UavTerminal";
+							goggles="G_Aviator";
+							hmd="NVGoggles";
+							headgear="H_HelmetB_desert";
+						};
 					};
 					id=1;
 					type="B_engineer_F";
@@ -921,7 +1138,7 @@ class Mission
 			name="building_markers";
 			class Entities
 			{
-				items=14;
+				items=15;
 				class Item0
 				{
 					dataType="Object";
@@ -1130,7 +1347,7 @@ class Mission
 					};
 					id=51;
 					type="Land_TTowerBig_1_F";
-					atlOffset=1.9828477;
+					atlOffset=1.9828472;
 				};
 				class Item13
 				{
@@ -1148,9 +1365,24 @@ class Mission
 					type="Land_WaterTower_02_F";
 					atlOffset=4.7683716e-07;
 				};
+				class Item14
+				{
+					dataType="Marker";
+					position[]={2010.9821,6.243,5806.813};
+					name="marker_7";
+					markerType="RECTANGLE";
+					type="";
+					fillName="Border";
+					a=56.346001;
+					b=41.854;
+					angle=193.71094;
+					drawBorder=1;
+					id=70;
+					atlOffset=-0.29479599;
+				};
 			};
 			id=45;
-			atlOffset=-0.29379034;
+			atlOffset=-0.29738331;
 		};
 		class Item14
 		{
@@ -1175,49 +1407,145 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2027.2078,6.5003924,5791.144};
+						position[]={2019.519,6.4093084,5784.502};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="MMG_02_sand_F";
+								optics="optic_Hamr";
+								flashlight="acc_pointer_IR";
+								underBarrel="bipod_01_F_snd";
+								class primaryMuzzleMag
+								{
+									name="130Rnd_338_Mag";
+									ammoLeft=130;
+								};
+							};
+							class handgun
+							{
+								name="hgun_P07_F";
+								class primaryMuzzleMag
+								{
+									name="16Rnd_9x21_Mag";
+									ammoLeft=16;
+								};
+							};
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=4;
+									class Item0
+									{
+										name="16Rnd_9x21_Mag";
+										count=2;
+										ammoLeft=16;
+									};
+									class Item1
+									{
+										name="SmokeShell";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="SmokeShellGreen";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="Chemlight_green";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="V_PlateCarrier1_rgr";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="130Rnd_338_Mag";
+										count=2;
+										ammoLeft=130;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							gps="B_UavTerminal";
+							goggles="G_Tactical_Black";
+							hmd="NVGoggles";
+							headgear="H_HelmetB";
+						};
 					};
 					id=61;
 					type="B_HeavyGunner_F";
-					atlOffset=-9.5367432e-07;
+					atlOffset=-4.7683716e-07;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male02ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
 			id=60;
-			atlOffset=-9.5367432e-07;
+			atlOffset=-4.7683716e-07;
 		};
 		class Item16
-		{
-			dataType="Marker";
-			position[]={2465.3704,62.193195,5532.7344};
-			name="marker_1";
-			type="loc_Fuelstation";
-			id=62;
-		};
-		class Item17
-		{
-			dataType="Marker";
-			position[]={1959.0936,5.6999998,5734.1523};
-			name="marker_5";
-			type="loc_Lighthouse";
-			id=66;
-		};
-		class Item18
-		{
-			dataType="Marker";
-			position[]={1836.3851,5.5,5749.0103};
-			name="marker_6";
-			type="loc_Lighthouse";
-			id=67;
-		};
-		class Item19
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1233,31 +1561,32 @@ class Mission
 			id=68;
 			type="Land_fs_feed_F";
 		};
-		class Item20
+		class Item17
 		{
-			dataType="Marker";
-			position[]={2010.9821,6.243,5806.813};
-			name="marker_7";
-			markerType="RECTANGLE";
-			type="";
-			fillName="Border";
-			a=56.346001;
-			b=41.854;
-			angle=193.71098;
-			drawBorder=1;
-			id=70;
-			atlOffset=-0.29479599;
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2048.3748,9.3446503,5768.8672};
+				angles[]={0,0.2297992,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=71;
+			type="Land_Lighthouse_small_F";
 		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=14;
+			nextID=15;
 		};
 		class Links
 		{
-			items=14;
+			items=15;
 			class Item0
 			{
 				linkID=0;
@@ -1392,6 +1721,16 @@ class Mission
 			{
 				linkID=13;
 				item0=68;
+				item1=44;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item14
+			{
+				linkID=14;
+				item0=71;
 				item1=44;
 				class CustomData
 				{

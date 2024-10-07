@@ -19,4 +19,6 @@ params ["_module"];
 private _objects = synchronizedObjects _module;
 _objects = _objects select {(_x namedProperties ["Geometry"]) getOrDefault ["map", ""] != ""};
 
+TRACE_2("Creating markers",_module,count _objects);
+
 [_objects] call FUNC(create);

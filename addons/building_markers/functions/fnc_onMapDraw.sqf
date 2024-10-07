@@ -27,16 +27,16 @@ if (!GVAR(enabled)) exitWith {};
 private _scaleInv = 1 / ctrlMapScale _ctrlMap;
 private _zoomPts = ZOOM_PTS_BASE * (_scaleInv) * GVAR(landSizeInv);
 
-systemChat str _zoomPts;
-
 if (GVAR(visibleObj) && (_zoomPts < PTS_OBJ)) exitWith {
+    TRACE_1("hiding",_zoomPts);
+
     GVAR(visibleObj) = false;
-    // hide
     {_x setMarkerAlphaLocal 0} forEach ADDON_MARKERS;
 };
 
 if (!GVAR(visibleObj) && (_zoomPts > PTS_OBJ)) exitWith {
+    TRACE_1("showing",_zoomPts);
+
     GVAR(visibleObj) = true;
-    // show
     {_x setMarkerAlphaLocal 1} forEach ADDON_MARKERS;
 };
