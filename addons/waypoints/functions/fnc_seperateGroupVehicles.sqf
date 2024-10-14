@@ -41,7 +41,7 @@ private _newgroups = [];
 
     if (_cloneWaypoint) then {
         private _waypointPos = (getWPPos [_oldGroup,currentWaypoint _oldGroup]);
-        if (_waypointPos isEqualTo [0,0,0]) exitwith {};
+        if (_waypointPos isEqualTo [0,0,0]) exitWith {};
         private _waypointType = waypointType [_oldGroup,currentWaypoint _oldGroup];
         private _waypointScript = waypointScript [_oldGroup,currentWaypoint _oldGroup];
         private _nearPos = _waypointPos vectorAdd [random _waypointRandomDif,random _waypointRandomDif,0];
